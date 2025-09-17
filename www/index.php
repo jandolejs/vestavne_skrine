@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skříně na míru Plzeň | KutilHonza</title>
+    <title>Skříně na míru Plzeň | Kutil Honza</title>
     <meta name="description" content="Profesionální montáž vestavěných skříní a nábytku na míru v Plzni a okolí. Využijte každý centimetr vašeho prostoru.">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -56,14 +56,13 @@
         
         /* --- HERO SEKCE (ÚVOD) --- */
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x800.png?text=VAŠE+FOTO+SKŘÍNĚ'); /* <-- ZDE ZMĚNIT FOTKU POZADÍ */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero.png');
             background-size: cover;
             background-position: center;
             color: white;
             text-align: center;
             padding: 120px 20px;
         }
-
         .hero p {
             max-width: 600px;
             margin: 1rem auto 2rem auto;
@@ -153,12 +152,14 @@
             border-radius: 5px;
             overflow: hidden;
             text-align: center;
+            margin: auto;
         }
 
         .gallery-item img {
-            width: 100%;
+            /*width: 100%;*/
             height: 250px;
-            object-fit: cover;
+            margin: auto;
+            /*object-fit: cover;*/
             display: block;
             transition: transform 0.3s ease;
         }
@@ -243,12 +244,14 @@
 <body>
 
     <header class="hero">
-        <h1>Skříně na míru v Plzni a okolí</h1>
-        <p class="motto">Váš prostor, vaše pravidla, vaše skříň.</p>
-        <p>
-            Už vás nebaví kompromisy s nábytkem z obchodních řetězců? Vytvořím pro vás úložné prostory, které perfektně zapadnou do vašeho interiéru a využijí každý centimetr místa. Precizní montáž, osobní přístup a řešení přesně podle vašich představ.
-        </p>
-        <a href="#kontakt" class="cta-button">Nezávazná poptávka</a>
+        <div style="background-color: rgba(0, 0, 0, 0.6); padding: 100px">
+            <h1>Skříně na míru v Plzni a okolí</h1>
+            <p class="motto">Váš prostor, vaše pravidla, vaše skříň.</p>
+            <p>
+                Už vás nebaví kompromisy s nábytkem z obchodních řetězců? Vytvořím pro vás úložné prostory, které perfektně zapadnou do vašeho interiéru a využijí každý centimetr místa. Precizní montáž, osobní přístup a řešení přesně podle vašich představ.
+            </p>
+            <a href="#kontakt" class="cta-button">Nezávazná poptávka</a>
+        </div>
     </header>
 
     <section class="benefits-banner">
@@ -296,43 +299,44 @@
                     <h3>Čistota a finální předání</h3>
                     <p>Po dokončení montáže po sobě zanechám perfektně uklizený prostor. Novou skříň vám předám plně funkční a připravenou k okamžitému používání.</p>
                 </div>
+                <div class="service-item">
+                    <h3>Individuální návrh řešení</h3>
+                    <p>Každý interiér je jiný, proto vytvářím řešení na míru. Připravím pro vás návrh, který bude ladit s vaším stylem a zároveň prakticky využije dostupný prostor.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Rychlá realizace</h3>
+                    <p>Dbám na efektivní postup práce, abyste novou skříň mohli začít používat co nejdříve, aniž by trpěla kvalita montáže.</p>
+                </div>
+
             </div>
         </section>
         
         <section id="galerie" class="container">
             <h2>Ukázky mé práce</h2>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300.png?text=VAŠE+FOTO+1" alt="Ukázka práce 1"> <p>Vestavěná skříň v ložnici, dekor Dub Sonoma</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300.png?text=VAŠE+FOTO+2" alt="Ukázka práce 2"> <p>Šatní systém v předsíni s posuvnými dveřmi</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300.png?text=VAŠE+FOTO+3" alt="Ukázka práce 3"> <p>Atypické řešení úložného prostoru v podkroví</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://via.placeholder.com/400x300.png?text=VAŠE+FOTO+4" alt="Ukázka práce 4"> <p>Detail vnitřního uspořádání – výsuvné koše</p>
-                </div>
+                <div class="gallery-item"><img src="/e1.jpg" alt="Ukázka práce 1"> <p>Skříň na míru do ložnice<br>Cena: cca 60tis Kč</p></div>
+                <div class="gallery-item"><img src="/e2.jpg" alt="Ukázka práce 1"> <p>Skříň do chodby<br>Cena: cca 50tis Kč</p></div>
+                <div class="gallery-item"><img src="/e3.jpg" alt="Ukázka práce 1"> <p>Ukázka výsledku montáže<br>Cena: cca 70tis Kč</p></div>
+                <div class="gallery-item"><img src="/e6.jpg" alt="Ukázka práce 1"> <p>Skříň přesně do obýváku<br>Cena: cca 50tis Kč</p></div>
             </div>
         </section>
 
         <section id="kontakt" class="container">
-            <h2>Napište si o nezávaznou kalkulaci</h2>
+            <h2>Napište si o nezávaznou konzultaci</h2>
             <div class="contact-section">
                 <div class="contact-flex">
                     <div class="contact-info">
                         <h3>Kontaktujte mě</h3>
-                        <p>Máte specifické přání nebo potřebujete poradit s nejlepším řešením pro váš domov? Neváhejte mě kontaktovat. Rád s vámi proberu všechny možnosti.</p>
+                        <p>Máte specifické přání nebo potřebujete poradit s nejlepším řešením pro váš domov? Neváhejte mě kontaktovat.<br>Rád s vámi proberu všechny možnosti.</p>
                         <p>
-                            <strong>Jan Novák</strong><br> Kutil Honza
+                            <strong>Kutil Honza</strong>
                         </p>
                         <p>
-                            📞 <strong>Telefon:</strong> <a href="tel:+420123456789">+420 123 456 789</a><br> 📧 <strong>E-mail:</strong> <a href="mailto:vase.jmeno@email.cz">vase.jmeno@email.cz</a> </p>
+                            📞 <strong>Telefon:</strong> <a href="tel:+420603381044">+420 603 381 044</a><br> 📧 <strong>E-mail:</strong> <a href="mailto:nabytek@kutilhonza.cz">nabytek@kutilhonza.cz</a> </p>
                     </div>
                     <div class="contact-form">
                         <h3>Rychlá poptávka</h3>
-                        <form action="#" method="POST">
+                        <form action="/form.php" method="POST" id="contactForm">
                             <div class="form-group">
                                 <label for="name">Vaše jméno:</label>
                                 <input type="text" id="name" name="name" required>
@@ -347,6 +351,7 @@
                             </div>
                             <button type="submit" class="cta-button">Odeslat poptávku</button>
                         </form>
+                        <div id="formResponse" style="margin-top:10px;"></div>
                     </div>
                 </div>
             </div>
@@ -355,7 +360,7 @@
         <section id="mapa" class="container">
             <h2 style="margin-bottom: 20px;">Najdete mě v Plzni</h2>
             <div style="background-color: #ccc; height: 400px; display: flex; align-items: center; justify-content: center; color: #333; border-radius: 5px;">
-                PROSTOR PRO VAŠI MAPU
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d576.4153920112682!2d13.407957435962262!3d49.74711269312975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1scs!2scz!4v1758136448071!5m2!1scs!2scz" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
@@ -364,5 +369,36 @@
         <p>&copy; 2025 Kutil Honza - Montáž skříní na míru Plzeň | Vytvořeno s péčí</p>
     </footer>
 
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+        const response = await fetch('form.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+        const output = document.getElementById('formResponse');
+
+        if (result.status === 'success') {
+            output.style.color = 'green';
+            output.textContent = result.message;
+            form.reset();
+        } else {
+            output.style.color = 'red';
+            output.textContent = result.message;
+        }
+
+    } catch (error) {
+        document.getElementById('formResponse').textContent = "Nastala chyba: " + error;
+    }
+});
+</script>
 </body>
 </html>
