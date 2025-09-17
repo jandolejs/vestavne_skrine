@@ -332,7 +332,10 @@
                             <strong>Kutil Honza</strong>
                         </p>
                         <p>
-                            📞 <strong>Telefon:</strong> <a href="tel:+420603381044">+420 603 381 044</a><br> 📧 <strong>E-mail:</strong> <a href="mailto:nabytek@kutilhonza.cz">nabytek@kutilhonza.cz</a> </p>
+                            📞 <strong>Telefon:</strong> <a href="tel:+420603381044">+420 603 381 044</a>
+                            <br> 📧 <strong>E-mail:</strong> <a href="mailto:nabytek@kutilhonza.cz">nabytek@kutilhonza.cz</a>
+                            <br>🗺️  Lokace: Plzen, Jugoslávská 2
+                        </p>
                     </div>
                     <div class="contact-form">
                         <h3>Rychlá poptávka</h3>
