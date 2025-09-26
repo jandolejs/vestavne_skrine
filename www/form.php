@@ -1,7 +1,6 @@
 <?php
 header('Content-Type: application/json; charset=UTF-8');
 
-// sem si doplníš svoje údaje
 $botToken = "5683006293:AAHIoRepm_uhfKfAYW9piJCKYAyDEM_FfAM";
 $chatId   = "358369613";
 
