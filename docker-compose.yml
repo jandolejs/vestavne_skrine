@@ -1,0 +1,27 @@
+services:
+
+    frontend:
+        container_name: ${PROJECT_NAME}
+        build:
+            context: .
+            platforms:
+                - linux/amd64
+        image: ghcr.io/jandolejs/vestavne_skrine:latest
+        environment:
+            TELEGRAM_TOKEN: $TELEGRAM_TOKEN
+            BASE_URL: $PROJECT_BASE_URL
+            dsn: $dsn
+            user: $user
+            password: $password
+        networks:
+            - web
+        restart: unless-stopped
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.${PROJECT_NAME}.rule=Host(`${PROJECT_BASE_URL}`)"
+            - "traefik.http.routers.${PROJECT_NAME}.entrypoints=websecure"
+
+networks:
+  web:
+    name: www
+    external: true
