@@ -64,7 +64,7 @@
             padding: 120px 20px;
         }
         .hero p {
-            max-width: 600px;
+            max-width: 783px;
             margin: 1rem auto 2rem auto;
             font-size: 1.1rem;
         }
@@ -94,7 +94,6 @@
         /* --- BANNER BENEFITŮ --- */
         .benefits-banner {
             background-color: var(--color-surface);
-            padding: 40px 20px;
         }
 
         .benefits-grid {
@@ -109,20 +108,24 @@
 
         .benefit {
             flex: 1;
-            min-width: 200px;
-            padding: 15px;
+            width: 200px;
+            padding: 25px;
         }
 
         .benefit svg {
             width: 50px;
             height: 50px;
-            margin-bottom: 15px;
             stroke: var(--color-primary); /* Barva ikonky */
         }
 
         .benefit h3 {
-            margin-bottom: 10px;
+            margin-bottom: 1px;
             font-size: 1.2rem;
+        }
+
+        .benefit p {
+            margin-top: 10px;
+            margin-bottom: 0;
         }
 
         /* --- SEKCE POPIS SLUŽBY --- */
@@ -239,18 +242,47 @@
             .hero { padding: 80px 20px; }
         }
 
+        /* Default: show text, hide link */
+        .call-link { display: none; }
+        .call-text { display: inline-block; }
+
+        /* On small screens (mobile) show link, hide text */
+        @media (max-width: 768px) {
+          .call-link { display: inline-block }
+          .call-text { display: none; }
+        }
+
     </style>
 </head>
 <body>
 
     <header class="hero">
-        <div style="background-color: rgba(0, 0, 0, 0.6); padding: 100px">
+        <div style="background-color: rgba(0, 0, 0, 0.6); padding: 50px 10px">
             <h1>Skříně na míru v Plzni a okolí</h1>
             <p class="motto">Váš prostor, vaše pravidla, vaše skříň.</p>
             <p>
                 Už vás nebaví kompromisy s nábytkem z obchodních řetězců? Vytvořím pro vás úložné prostory, které perfektně zapadnou do vašeho interiéru a využijí každý centimetr místa. Precizní montáž, osobní přístup a řešení přesně podle vašich představ.
             </p>
-            <a href="#kontakt" class="cta-button">Nezávazná poptávka</a>
+            <div>
+                <a style="margin-top: 10px;" class="cta-button call-link" href="tel:+420603381044">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></svg>
+                    Zavolat
+                </a>
+                <span style="margin-top: 10px;" class="cta-button call-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></svg>
+                    603 381 044
+                </span>
+
+                <a style="margin-top: 10px;" class="cta-button call-link" href="mailto:nabytek@kutilhonza.cz">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg>
+                    Napsat
+                </a>
+                <span style="margin-top: 10px;" class="cta-button call-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg>
+                    nabytek@kutilhonza.cz
+                </span>
+                <a style="margin-top: 10px;" href="#kontakt" class="cta-button" style="margin-bottom: 50px">Nezávazná poptávka</a>
+            </div>
         </div>
     </header>
 
@@ -263,8 +295,8 @@
             </div>
             <div class="benefit">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
-                <h3>Využití každého cm</h3>
-                <p>Návrh, který optimálně využije každý kout vašeho prostoru.</p>
+                <h3>Využití každého centimetru</h3>
+                <p>Optimální využití celého místa</p>
             </div>
             <div class="benefit">
                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.472-2.472a3.375 3.375 0 00-4.773-4.773L6.75 10.5M11.42 15.17L6.75 10.5m4.67 4.67L6.75 10.5" /></svg>
@@ -410,8 +442,8 @@ document.getElementById('contactForm').addEventListener('submit', async function
 <?php
 
 function sendTelegramMessage(): bool {
-	$botToken = "7714843890:AAHmnsT5C4fSPOZe3xs9hUPeorZ8DJaIU-E";
-	$chatId   = "358369613";
+    $botToken = "7714843890:AAHmnsT5C4fSPOZe3xs9hUPeorZ8DJaIU-E";
+    $chatId   = "358369613";
     $text  = "👀 nabytek loaded";
     $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
     $currentUrl = $_SERVER['REQUEST_URI'] ?? ($_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] !== '' ? ('?' . $_SERVER['QUERY_STRING']) : ''));

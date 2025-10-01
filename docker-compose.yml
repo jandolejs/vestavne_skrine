@@ -2,6 +2,8 @@ services:
 
     frontend:
         container_name: ${PROJECT_NAME}
+        ports:
+            - 8008:80
         build:
             context: .
             platforms:
