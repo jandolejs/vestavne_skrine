@@ -342,10 +342,10 @@
         <section id="galerie" class="container">
             <h2>Ukázky mé práce</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="/e1.jpg" alt="Ukázka práce 1"> <p>Skříň na míru do ložnice<br>Cena: cca 60tis Kč</p></div>
-                <div class="gallery-item"><img src="/e2.jpg" alt="Ukázka práce 1"> <p>Skříň do chodby<br>Cena: cca 50tis Kč</p></div>
-                <div class="gallery-item"><img src="/e3.jpg" alt="Ukázka práce 1"> <p>Ukázka výsledku montáže<br>Cena: cca 70tis Kč</p></div>
-                <div class="gallery-item"><img src="/e6.jpg" alt="Ukázka práce 1"> <p>Skříň přesně do obýváku<br>Cena: cca 50tis Kč</p></div>
+                <div class="gallery-item"><img src="/e1.jpg" alt="Ukázka práce 1"> <p>Skříň na míru do ložnice<br>Cena: cca 45tis Kč</p></div>
+                <div class="gallery-item"><img src="/e2.jpg" alt="Ukázka práce 2"> <p>Skříň do chodby<br>Cena: cca 40tis Kč</p></div>
+                <div class="gallery-item"><img src="/e3.jpg" alt="Ukázka práce 3"> <p>Ukázka výsledku montáže<br>Cena: cca 55tis Kč</p></div>
+                <div class="gallery-item"><img src="/e5.jpg" alt="Ukázka práce 4"> <p>Skříň přesně do obýváku<br>Cena: cca 40tis Kč</p></div>
             </div>
         </section>
 
