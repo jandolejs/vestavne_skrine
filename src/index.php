@@ -463,7 +463,7 @@ function sendTelegramMessage(): bool {
 
     $agent = $_SERVER['HTTP_USER_AGENT'] ?? '';
     if ($agent) {
-        $text .= "\n\nAgent: $agent"
+        $text .= "\n\nAgent: $agent";
     }
 
     $options = [
