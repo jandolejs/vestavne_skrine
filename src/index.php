@@ -452,13 +452,19 @@ document.getElementById('contactForm').addEventListener('submit', async function
 <?php
 
 function sendTelegramMessage(): bool {
+
     $botToken = "7714843890:AAHmnsT5C4fSPOZe3xs9hUPeorZ8DJaIU-E";
     $chatId   = "358369613";
-    $text  = "👀 nabytek loaded";
-    $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+
+    $text  = "👀 Nábtek loaded";
+
     $currentUrl = $_SERVER['REQUEST_URI'] ?? ($_SERVER['PHP_SELF'] . (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] !== '' ? ('?' . $_SERVER['QUERY_STRING']) : ''));
     $text .= "\n\nURI: $currentUrl";
-    $text .= $_SERVER['HTTP_USER_AGENT'] ? "\n\n" . $_SERVER['HTTP_USER_AGENT'] : '';
+
+    $agent = $_SERVER['HTTP_USER_AGENT'] ?? '';
+    if ($agent) {
+        $text .= "\n\nAgent: $agent"
+    }
 
     $options = [
         "http" => [
@@ -468,6 +474,12 @@ function sendTelegramMessage(): bool {
             "timeout" => 10
         ]
     ];
+
+    // If uptime robot checks server status, skip sending notifications
+    if ($agent && strpos($agent, 'UptimeRobot')) {
+        return false;
+    }
+
     $context  = stream_context_create($options);
     $result = file_get_contents("https://api.telegram.org/bot{$botToken}/sendMessage", false, $context);
     return $result !== false;
