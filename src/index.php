@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skříně na míru Plzeň | Kutil Honza</title>
+    <title>Skříně na míru Plzeň | K+H Interiéry</title>
     <meta name="description" content="Profesionální montáž vestavěných skříní a nábytku na míru v Plzni a okolí. Využijte každý centimetr vašeho prostoru.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
