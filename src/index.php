@@ -387,8 +387,8 @@
                                 <input type="text" id="name" name="name" required>
                             </div>
                             <div class="form-group">
-                                <label for="email">Váš e-mail:</label>
-                                <input type="email" id="email" name="email" required>
+                                <label for="email">Kontakt na Vás (Email, telefon, ...)</label>
+                                <input id="email" name="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="message">Vaše zpráva (stručně popište vaši představu):</label>
