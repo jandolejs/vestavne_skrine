@@ -252,6 +252,70 @@
           .call-text { display: none; }
         }
 
+        /* --- LIGHTBOX / GALLERY PREVIEW --- */
+        .lightbox-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.2s ease, visibility 0.2s;
+        }
+        .lightbox-overlay.open {
+            visibility: visible;
+            opacity: 1;
+        }
+        .lightbox-content {
+            position: relative;
+            max-width: 95%;
+            max-height: 95%;
+            text-align: center;
+        }
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 85vh;
+            display: block;
+            margin: 0 auto;
+            border-radius: 6px;
+        }
+        .lightbox-caption {
+            color: var(--color-text);
+            margin-top: 10px;
+            font-style: italic;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background: var(--color-primary);
+            color: var(--color-text-dark);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 20px;
+            line-height: 1;
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-text);
+            font-size: 32px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 8px 12px;
+            opacity: 0.9;
+        }
+        .lightbox-prev { left: 8px; }
+        .lightbox-next { right: 8px; }
+
     </style>
     
     <!-- Hotjar Tracking Code for https://nabytek.kutilhonza.cz/ -->
@@ -482,6 +546,80 @@ document.getElementById('contactForm').addEventListener('submit', async function
 </script>
 </body>
 </html>
+
+<!-- Lightbox overlay -->
+<div id="lightbox" class="lightbox-overlay" role="dialog" aria-hidden="true">
+    <div class="lightbox-content">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Zavřít">×</button>
+        <img id="lightboxImg" class="lightbox-img" src="" alt="">
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Předchozí">‹</button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Další">›</button>
+    </div>
+</div>
+
+<script>
+// Lightbox behaviour
+document.addEventListener('DOMContentLoaded', function() {
+    const items = Array.from(document.querySelectorAll('.gallery-item'));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const closeBtn = document.getElementById('lightboxClose');
+    const prevBtn = document.getElementById('lightboxPrev');
+    const nextBtn = document.getElementById('lightboxNext');
+    let current = -1;
+
+    items.forEach((item, idx) => {
+        const image = item.querySelector('img');
+        item.style.cursor = 'zoom-in';
+        item.addEventListener('click', () => {
+            current = idx;
+            openLightbox(image.src, item.querySelector('p')?.innerText || image.alt || '');
+        });
+    });
+
+    function openLightbox(src, text) {
+        lightboxImg.src = src;
+        lightboxImg.alt = text || '';
+        lightboxCaption.textContent = text || '';
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        lightboxImg.src = '';
+        current = -1;
+    }
+
+    function showByIndex(idx) {
+        if (items.length === 0) return;
+        if (idx < 0) idx = items.length - 1;
+        if (idx >= items.length) idx = 0;
+        current = idx;
+        const imgEl = items[current].querySelector('img');
+        openLightbox(imgEl.src, items[current].querySelector('p')?.innerText || imgEl.alt || '');
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showByIndex(current - 1); });
+    nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showByIndex(current + 1); });
+
+    document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showByIndex(current - 1);
+        if (e.key === 'ArrowRight') showByIndex(current + 1);
+    });
+});
+</script>
 
 
 <?php
