@@ -506,10 +506,7 @@
         </section>
         
         <section id="mapa" class="container">
-            <h2 style="margin-bottom: 20px;">Najdete mě v Plzni</h2>
-            <div style="background-color: #ccc; height: 400px; display: flex; align-items: center; justify-content: center; color: #333; border-radius: 5px;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d576.4153920112682!2d13.407957435962262!3d49.74711269312975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1scs!2scz!4v1758136448071!5m2!1scs!2scz" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <h2 style="margin-bottom: 20px;">Najdete mě v <b>Plzni</b></h2>
         </section>
     </main>
 
