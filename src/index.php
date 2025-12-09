@@ -458,6 +458,10 @@
                 <div class="gallery-item"><img src="/e2.jpg" alt="Ukázka práce 2"> <p>Skříň do chodby<br>Cena: cca 40tis Kč</p></div>
                 <div class="gallery-item"><img src="/e3.jpg" alt="Ukázka práce 3"> <p>Ukázka výsledku montáže<br>Cena: cca 55tis Kč</p></div>
                 <div class="gallery-item"><img src="/e5.jpg" alt="Ukázka práce 4"> <p>Skříň přesně do obýváku<br>Cena: cca 40tis Kč</p></div>
+                <div class="gallery-item"><img src="/s1.jpg" alt="Servis koleček"> <p>Servis koleček<br>Cena: 4tis Kč</p></div>
+                <div class="gallery-item"><img src="/s2.jpg" alt="Servis kolejnic"> <p>Servis kolejnic<br>Cena: 5tis Kč</p></div>
+                <div class="gallery-item"><img src="/s3.jpg" alt="Servis lišty"> <p>Servis horní lišty<br>Cena: 7tis Kč</p></div>
+                <div class="gallery-item"><img src="/s4.jpg" alt="Servis těsnění"> <p>Přilepení těsnění<br>Cena: 2tis Kč</p></div>
             </div>
         </section>
 
