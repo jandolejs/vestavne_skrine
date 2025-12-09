@@ -346,6 +346,13 @@
                 <p>Naslouchám vašim potřebám a přizpůsobím řešení na míru.</p>
             </div>
         </div>
+        
+        <div class="benefits-grid">
+            <div class="benefit">
+                <h3>Pozáruční servis</h3>
+                <p>Provádíme také servis skříní u kterých Váš dodavatel již není ochotný servis provést.</p>
+            </div>
+        </div>
     </section>
 
     <main>
