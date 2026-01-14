@@ -52,9 +52,7 @@ function sendTelegramMessage(array $data, string $botToken, string $chatId): boo
         'Content-Type: application/json',
         'User-Agent: Mozilla/5.0 (PHP-Server)' // Good practice to set a UA
     ]);
-    
-    $response = curl_exec($ch);
-    curl_close($ch);
+    curl_exec($ch);
 
     return $result !== false;
 }
