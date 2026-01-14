@@ -59,7 +59,7 @@ function sendTelegramMessage(array $data, string $botToken, string $chatId): boo
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (sendTelegramMessage($_POST, $botToken, $chatId)) {
-        echo json_encode(['status' => 'success', 'message' => 'Zpráva byla odeslána ✅']);
+        echo json_encode(['status' => 'success', 'message' => 'Zpráva byla odeslána. Pokud se Vám neozvu do zítra, zavolejte mi prosím ✅']);
     } else {
         echo json_encode(['status' => 'error', 'message' => 'Nepodařilo se odeslat ❌, prosím napište mi email. Děkuji.']);
     }
