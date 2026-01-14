@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+    <script defer src="https://umami.jandolejs.cz/script.js" data-website-id="2666c3d1-482f-4a61-ad59-52b153a5bffe"></script>
+
     <style>
         /* --- ZÁKLADNÍ NASTAVENÍ A BARVY --- */
         :root {
