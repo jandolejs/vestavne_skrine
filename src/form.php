@@ -31,28 +31,36 @@ function sendTelegramMessage(array $data, string $botToken, string $chatId): boo
     $result = file_get_contents($url, false, $context);
 
     // umami report
-    $umami_url = 'https://umami.jandolejs.cz/api/send';
-    $website_id = '2666c3d1-482f-4a61-ad59-52b153a5bffe';
+    $umamiUrl  = 'https://umami.jandolejs.cz';
+    $websiteId = '2666c3d1-482f-4a61-ad59-52b153a5bffe';
     
-    $data = [
+    $headers = [
+        'Content-Type: application/json',
+    ];
+    if (!empty($_SERVER['REMOTE_ADDR'])) {
+        $headers[] = 'X-Forwarded-For: ' . $_SERVER['REMOTE_ADDR'];
+    }
+    
+    $payload = [
         'type' => 'event',
         'payload' => [
-            'website' => $website_id,
-            'url' => '/form',
-            'event_name' => 'form_completed',
-            'event_data' => $data,
-        ]
+            'website' => $websiteId,
+            'name'    => 'form',
+            'url'     => 'https://example.com/checkout',
+            'data'    => $data,
+        ],
     ];
     
-    $ch = curl_init($umami_url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Content-Type: application/json',
-        'User-Agent: Mozilla/5.0 (PHP-Server)' // Good practice to set a UA
+    $ch = curl_init($umamiUrl . '/api/send');
+    curl_setopt_array($ch, [
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST           => true,
+        CURLOPT_HTTPHEADER     => $headers,
+        CURLOPT_POSTFIELDS     => json_encode($payload, JSON_THROW_ON_ERROR),
+        CURLOPT_USERAGENT      => $_SERVER['HTTP_USER_AGENT'] ?? 'PHP',
+        CURLOPT_TIMEOUT_MS     => 300,
     ]);
-    curl_exec($ch);
+    $response = curl_exec($ch); // and lets hope it fires
 
     return $result !== false;
 }
