@@ -30,6 +30,32 @@ function sendTelegramMessage(array $data, string $botToken, string $chatId): boo
     $context  = stream_context_create($options);
     $result = file_get_contents($url, false, $context);
 
+    // umami report
+    $umami_url = 'https://umami.jandolejs.cz/api/send';
+    $website_id = '2666c3d1-482f-4a61-ad59-52b153a5bffe';
+    
+    $data = [
+        'type' => 'event',
+        'payload' => [
+            'website' => $website_id,
+            'url' => '/form',
+            'event_name' => 'form_completed',
+            'event_data' => $data,
+        ]
+    ];
+    
+    $ch = curl_init($umami_url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'Content-Type: application/json',
+        'User-Agent: Mozilla/5.0 (PHP-Server)' // Good practice to set a UA
+    ]);
+    
+    $response = curl_exec($ch);
+    curl_close($ch);
+
     return $result !== false;
 }
 
