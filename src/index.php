@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nábytek na míru Plzeň | K+H Interiéry</title>
+    <link rel="icon" type="image/png" href="/icon.png" />
+
     <meta name="description" content="Profesionální montáž vestavěných skříní a nábytku na míru v Plzni a okolí. Využijte každý centimetr vašeho prostoru.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -368,7 +370,7 @@
             <h1>Nábytek na míru v Plzni a okolí</h1>
             <p class="motto">Váš prostor, vaše pravidla, vaše skříň.</p>
             <p>
-                Už vás nebaví kompromisy s nábytkem z obchodních řetězců? Vytvořím pro vás úložné prostory, které perfektně zapadnou do vašeho interiéru a využijí každý centimetr místa. Precizní montáž, osobní přístup a řešení přesně podle vašich představ.
+                Nebaví nás kompromisy s nábytkem z obchodních řetězců! Vytvoříme pro vás úložné prostory, které perfektně zapadnou do interiéru a využijí každý centimetr místa. Precizní montáž, osobní přístup a řešení přesně podle vašich představ. provádíme servis i opravy – včetně pozáručních a domácích realizací.
             </p>
             <div>
                 <a style="margin-top: 10px;" class="cta-button" href="tel:+420603381044">
@@ -454,16 +456,31 @@
         </section>
 
         <section id="galerie" class="container">
-            <h2>Ukázky mé práce</h2>
+            <h2>Ukázky naší práce</h2>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="/e1.jpg" alt="Ukázka práce 1"> <p>Skříň na míru do ložnice<br>Cena: cca 45tis Kč</p></div>
-                <div class="gallery-item"><img src="/e2.jpg" alt="Ukázka práce 2"> <p>Skříň do chodby<br>Cena: cca 40tis Kč</p></div>
-                <div class="gallery-item"><img src="/e3.jpg" alt="Ukázka práce 3"> <p>Ukázka výsledku montáže<br>Cena: cca 55tis Kč</p></div>
-                <div class="gallery-item"><img src="/e5.jpg" alt="Ukázka práce 4"> <p>Skříň přesně do obýváku<br>Cena: cca 40tis Kč</p></div>
+
+                <div class="gallery-item"><img src="/roh1.jpg" alt="Rohová skříň 1."> <p>Rohová skříň - Příprava</p></div>
+                <div class="gallery-item"><img src="/roh2.jpg" alt="Rohová skříň 2."> <p>Rohová skříň - Montáž</p></div>
+                <div class="gallery-item"><img src="/roh3.jpg" alt="Rohová skříň 3."> <p>Rohová skříň - Výsledek</p></div>
+
+                <div class="gallery-item"><img src="/kolejnice1.jpg" alt="Výěmna kolejnice"> <p>Výměna kolejnice<br>Cena: 4tis Kč</p></div>
+                <div class="gallery-item"><img src="/e3.jpg" alt="Ukázka práce 3"> <p>Ukázka výsledku montáže<br>Cena: 55tis Kč</p></div>
                 <div class="gallery-item"><img src="/s1.jpg" alt="Servis koleček"> <p>Servis koleček<br>Cena: 4tis Kč</p></div>
-                <div class="gallery-item"><img src="/s2.jpg" alt="Servis kolejnic"> <p>Servis kolejnic<br>Cena: 5tis Kč</p></div>
+
+                <div class="gallery-item"><img src="/e1.jpg" alt="Ukázka práce 1"> <p>Skříň na míru do ložnice<br>Cena: 45tis Kč</p></div>
+                <div class="gallery-item"><img src="/e2.jpg" alt="Ukázka práce 2"> <p>Skříň do chodby<br>Cena: 40tis Kč</p></div>
+                <div class="gallery-item"><img src="/pojezdy1.jpg" alt="Výměna pojezdů"> <p>Zbroušení kolejnice a výměna pojezdů<br>Cena: 3tis Kč</p></div>
+
+                <div class="gallery-item"><img src="/seda1.jpg" alt="šedá skříň"> <p>Úzká skříň do pokoje<br>Cena komplet: 45 tisíc</p></div>
                 <div class="gallery-item"><img src="/s3.jpg" alt="Servis lišty"> <p>Servis horní lišty<br>Cena: 7tis Kč</p></div>
                 <div class="gallery-item"><img src="/s4.jpg" alt="Servis těsnění"> <p>Přilepení těsnění<br>Cena: 2tis Kč</p></div>
+
+                <div class="gallery-item"><img src="/e5.jpg" alt="Ukázka práce 4"> <p>Skříň přesně do obýváku<br>Cena: 40tis Kč</p></div>
+                <div class="gallery-item"><img src="/postel.jpg" alt="Postel"> <p>Složení postele<br>Cena: 6tis Kč</p></div>
+                <div class="gallery-item"><img src="/s2.jpg" alt="Servis kolejnic"> <p>Servis kolejnic<br>Cena: 5tis Kč</p></div>
+
+                <div class="gallery-item"><img src="/seda2.jpg" alt="šedá dva"> <p>Tmavě šedá skříň s postelí<br>celkem 43 000 Kč</p></div>
+                <div class="gallery-item"><img src="/svetla1.jpg" alt="Béžová skříň"> <p>Béžová skříň do ložnice<br>Cena s montáží 82 tisíc Kč</p></div>
             </div>
         </section>
 
@@ -472,8 +489,8 @@
             <div class="contact-section">
                 <div class="contact-flex">
                     <div class="contact-info">
-                        <h3>Kontaktujte mě</h3>
-                        <p>Máte specifické přání nebo potřebujete poradit s nejlepším řešením pro váš domov? Neváhejte mě kontaktovat.<br>Rád s vámi proberu všechny možnosti.</p>
+                        <h3>Kontaktujte nás</h3>
+                        <p>Máte specifické přání nebo potřebujete poradit s nejlepším řešením pro váš domov? Neváhejte nás kontaktovat.<br>Rád s vámi proberu všechny možnosti.</p>
                         <p>
                             <strong>Kutil Honza</strong>
                         </p>
@@ -488,8 +505,8 @@
                         <h3>Rychlá zpráva</h3>
                         <form action="/form.php" method="POST" id="contactForm">
                             <div class="form-group">
-                                <label for="name">Vaše jméno:</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="name">Vaše jméno (nepovinné):</label>
+                                <input type="text" id="name" name="name">
                             </div>
                             <div class="form-group">
                                 <label for="email">Kontakt na Vás (Email, telefon, ...)</label>
@@ -508,7 +525,7 @@
         </section>
 
         <section id="mapa" class="container">
-            <h2 style="margin-bottom: 20px;">Najdete mě v <b>Plzni</b></h2>
+            <h2 style="margin-bottom: 20px;">Najdete nás v <b>Plzni</b></h2>
         </section>
     </main>
 
