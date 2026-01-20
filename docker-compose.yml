@@ -8,7 +8,7 @@ services:
                 - linux/amd64
         image: ghcr.io/jandolejs/vestavne_skrine:latest
         ports:
-            - 80:80
+            - 8078:80
         environment:
             TELEGRAM_TOKEN: $TELEGRAM_TOKEN
             BASE_URL: $PROJECT_BASE_URL
