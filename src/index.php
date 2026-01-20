@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skříně na míru Plzeň | K+H Interiéry</title>
+    <title>Nábytek na míru Plzeň | K+H Interiéry</title>
     <meta name="description" content="Profesionální montáž vestavěných skříní a nábytku na míru v Plzni a okolí. Využijte každý centimetr vašeho prostoru.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -365,7 +365,7 @@
 
     <header class="hero">
         <div style="background-color: rgba(0, 0, 0, 0.6); padding: 50px 10px">
-            <h1>Skříně na míru v Plzni a okolí</h1>
+            <h1>Nábytek na míru v Plzni a okolí</h1>
             <p class="motto">Váš prostor, vaše pravidla, vaše skříň.</p>
             <p>
                 Už vás nebaví kompromisy s nábytkem z obchodních řetězců? Vytvořím pro vás úložné prostory, které perfektně zapadnou do vašeho interiéru a využijí každý centimetr místa. Precizní montáž, osobní přístup a řešení přesně podle vašich představ.
