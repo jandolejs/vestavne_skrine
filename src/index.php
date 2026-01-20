@@ -55,7 +55,7 @@
             font-size: 2.2rem;
             padding-top: 40px; /* Odsazení pro kotvy */
         }
-        
+
         /* --- HERO SEKCE (ÚVOD) --- */
         .hero {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero.png');
@@ -70,7 +70,7 @@
             margin: 1rem auto 2rem auto;
             font-size: 1.1rem;
         }
-        
+
         .motto {
             font-weight: 600;
             font-size: 1.2rem;
@@ -168,7 +168,7 @@
             display: block;
             transition: transform 0.3s ease;
         }
-        
+
         .gallery-item:hover img {
             transform: scale(1.05);
         }
@@ -185,18 +185,18 @@
             border-radius: 5px;
             padding: 40px;
         }
-        
+
         .contact-flex {
             display: flex;
             flex-wrap: wrap;
             gap: 40px;
         }
-        
+
         .contact-info, .contact-form {
             flex: 1;
             min-width: 300px;
         }
-        
+
         .contact-info a {
             color: var(--color-primary);
             text-decoration: none;
@@ -223,7 +223,7 @@
             color: var(--color-text);
             box-sizing: border-box; /* Důležité pro správné zobrazení */
         }
-        
+
         .form-group textarea {
             resize: vertical;
             min-height: 120px;
@@ -319,7 +319,7 @@
         .lightbox-next { right: 8px; }
 
     </style>
-    
+
     <!-- Hotjar Tracking Code for https://nabytek.kutilhonza.cz/ -->
     <script>
         (function(h,o,t,j,a,r){
@@ -338,10 +338,10 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'AW-11529391298');
     </script>
-    
+
     <!-- Meta Pixel Code -->
         <script>
         !function(f,b,e,v,n,t,s)
@@ -359,7 +359,7 @@
         src="https://www.facebook.com/tr?id=1530646648175296&ev=PageView&noscript=1"
         /></noscript>
     <!-- End Meta Pixel Code -->
-    
+
 </head>
 <body>
 
@@ -412,7 +412,7 @@
                 <p>Naslouchám vašim potřebám a přizpůsobím řešení na míru.</p>
             </div>
         </div>
-        
+
         <div class="benefits-grid">
             <div class="benefit">
                 <h3>Pozáruční servis</h3>
@@ -452,7 +452,7 @@
 
             </div>
         </section>
-        
+
         <section id="galerie" class="container">
             <h2>Ukázky mé práce</h2>
             <div class="gallery-grid">
@@ -506,7 +506,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="mapa" class="container">
             <h2 style="margin-bottom: 20px;">Najdete mě v <b>Plzni</b></h2>
         </section>
