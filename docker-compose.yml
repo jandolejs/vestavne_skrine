@@ -1,7 +1,7 @@
 services:
 
     frontend:
-        container_name: ${PROJECT_NAME}
+        container_name: vestavne_skrine_frontend
         build:
             context: .
             platforms:
@@ -10,18 +10,13 @@ services:
         ports:
             - 8078:80
         environment:
-            TELEGRAM_TOKEN: $TELEGRAM_TOKEN
-            BASE_URL: $PROJECT_BASE_URL
+            BASE_URL: nabytek.jandolejs.cz
             dsn: $dsn
             user: $user
             password: $password
         networks:
             - web
         restart: unless-stopped
-        labels:
-            - "traefik.enable=true"
-            - "traefik.http.routers.${PROJECT_NAME}.rule=Host(`${PROJECT_BASE_URL}`)"
-            - "traefik.http.routers.${PROJECT_NAME}.entrypoints=web,websecure"
 
 networks:
   web:
