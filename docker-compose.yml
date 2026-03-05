@@ -11,9 +11,6 @@ services:
             - 8078:80
         environment:
             BASE_URL: nabytek.jandolejs.cz
-            dsn: $dsn
-            user: $user
-            password: $password
         networks:
             - web
         restart: unless-stopped
