@@ -11,11 +11,4 @@ services:
             - 8078:80
         environment:
             BASE_URL: nabytek.jandolejs.cz
-        networks:
-            - web
         restart: unless-stopped
-
-networks:
-  web:
-    name: www
-    external: true
