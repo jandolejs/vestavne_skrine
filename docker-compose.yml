@@ -1,7 +1,7 @@
 services:
     web:
         container_name: vestavne_skrine_frontend
-        image: skrine-www
+        image: ghcr.io/jandolejs/vestavne_skrine:latest
         build:
             context: .
             platforms:
