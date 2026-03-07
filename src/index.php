@@ -634,7 +634,7 @@
             <span class="font-normal text-stone-400">(telefon nebo email)</span>
           </label>
           <input type="text" id="contact" name="contact" required
-                 placeholder="+420 xxx xxx xxx nebo email@example.com"
+                 placeholder="Telefon nebo email kde vás mohu kontaktovat"
                  class="form-input w-full px-4 py-4 rounded-xl text-stone-900 placeholder:text-stone-400 text-sm">
         </div>
 
@@ -741,7 +741,7 @@
   ══════════════════════════════════════════════ -->
   <footer class="bg-black py-6 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-stone-600">
-      <span>&copy; 2025 Kutil Honza &mdash; Montáž a servis vestavěných skříní, Plzeň</span>
+      <span>&copy; 2025 Kutil Honza &mdash; Montáž a servis vestavěných skříní Plzeň</span>
       <span class="text-stone-700">Montáž a servis vestavěných skříní</span>
     </div>
   </footer>
