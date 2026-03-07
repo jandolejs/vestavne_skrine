@@ -1,153 +1,119 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nábytek na míru Plzeň | K+H Interiéry</title>
-    <link rel="icon" type="image/png" href="/icon.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Montáž a servis vestavěných skříní – Kutil Honza Plzeň</title>
+  <meta name="description" content="Montáž, opravy a pozáruční servis vestavěných skříní v Plzni. Výroba na míru, seřízení dveří, výměna kolejnic a pojezdů. Individuální přístup ke každé zakázce.">
+  <meta name="keywords" content="montáž vestavěných skříní, servis vestavěných skříní, vestavěné skříně na míru, Plzeň, opravy skříní, seřízení dveří">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Montáž a servis vestavěných skříní – Kutil Honza Plzeň">
+  <meta property="og:description" content="Montáž, opravy a pozáruční servis vestavěných skříní v Plzni. Individuální přístup ke každé zakázce.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <meta name="description" content="Profesionální montáž vestavěných skříní a nábytku na míru v Plzni a okolí. Využijte každý centimetr vašeho prostoru.">
+  <!-- Umami Analytics -->
+  <script defer src="https://umami.jandolejs.cz/script.js" data-website-id="2666c3d1-482f-4a61-ad59-52b153a5bffe"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Hotjar Tracking Code for https://nabytek.kutilhonza.cz/ -->
+  <script>
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:6538784,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
 
-    <script defer src="https://umami.jandolejs.cz/script.js" data-website-id="2666c3d1-482f-4a61-ad59-52b153a5bffe"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11529391298"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-11529391298');
+  </script>
 
-    <style>
-        /* --- ZÁKLADNÍ NASTAVENÍ A BARVY --- */
-        :root {
-            --color-background: #222222; /* Tmavě šedá / Antracit */
-            --color-surface: #333333;   /* Mírně světlejší povrch */
-            --color-primary: #c5a47e;   /* Akcent - béžová/zlatavá */
-            --color-text: #f0f0f0;      /* Světlý text */
-            --color-text-dark: #333333; /* Tmavý text pro světlé prvky */
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1530646648175296');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1530646648175296&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            accent: '#D97706' /* amber-600 */
+          }
         }
+      }
+    }
+  </script>
 
-        html {
-            scroll-behavior: smooth; /* Plynulé rolování */
-        }
+  <style>
+    html { scroll-behavior: smooth; }
 
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-text);
-            line-height: 1.6;
-        }
+    .container {
+        max-width: 1100px !important;
+    }
+    /* ── Reveal on scroll ─────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity .75s cubic-bezier(.16,1,.3,1), transform .75s cubic-bezier(.16,1,.3,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+    .reveal-delay-4 { transition-delay: .4s; }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+    /* ── Hero ────────────────────────────────── */
+    .hero-bg {
+      background: linear-gradient(to bottom,
+        rgba(10,10,10,.75) 0%,
+        rgba(10,10,10,.45) 40%,
+        rgba(10,10,10,.8)  100%);
+    }
 
-        h1, h2 {
-            text-align: center;
-            font-weight: 700;
-            margin-bottom: 40px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-
-        h2 {
-            font-size: 2.2rem;
-            padding-top: 40px; /* Odsazení pro kotvy */
-        }
-
-        /* --- HERO SEKCE (ÚVOD) --- */
-        .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hero.png');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 120px 20px;
-        }
-        .hero p {
-            max-width: 783px;
-            margin: 1rem auto 2rem auto;
-            font-size: 1.1rem;
-        }
-
-        .motto {
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: var(--color-primary);
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--color-primary);
-            color: var(--color-text-dark);
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #d9b894;
-            transform: translateY(-2px);
-        }
-
-        /* --- BANNER BENEFITŮ --- */
-        .benefits-banner {
-            background-color: var(--color-surface);
-        }
-
-        .benefits-grid {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .benefit {
-            flex: 1;
-            width: 200px;
-            padding: 25px;
-        }
-
-        .benefit svg {
-            width: 50px;
-            height: 50px;
-            stroke: var(--color-primary); /* Barva ikonky */
-        }
-
-        .benefit h3 {
-            margin-bottom: 1px;
-            font-size: 1.2rem;
-        }
-
-        .benefit p {
-            margin-top: 10px;
-            margin-bottom: 0;
-        }
-
-        /* --- SEKCE POPIS SLUŽBY --- */
-        .service-description {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .service-item {
-            background-color: var(--color-surface);
-            padding: 30px;
-            border-radius: 5px;
-        }
-        .service-item h3 {
-            color: var(--color-primary);
-        }
-
-        /* --- GALERIE PRACÍ --- */
+    /* ── Service rows ────────────────────────── */
+    .svc-row {
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      transition: background .2s ease;
+    }
+    .svc-row:hover { background: rgba(255,255,255,.04); }
+    .svc-desc {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, opacity .3s ease;
+      opacity: 0;
+    }
+    .svc-row:hover .svc-desc { max-height: 3rem; opacity: 1; }
+    .svc-arrow {
+      transition: transform .3s ease, color .3s ease;
+    }
+    .svc-row:hover .svc-arrow { transform: translateX(6px); }
+    /* --- GALERIE PRACÍ --- */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -180,83 +146,7 @@
             margin: 0;
             font-style: italic;
         }
-
-        /* --- KONTAKTNÍ SEKCE --- */
-        .contact-section {
-            background-color: var(--color-surface);
-            border-radius: 5px;
-            padding: 40px;
-        }
-
-        .contact-flex {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .contact-info, .contact-form {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .contact-info a {
-            color: var(--color-primary);
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            background-color: var(--color-background);
-            border: 1px solid #555;
-            border-radius: 5px;
-            color: var(--color-text);
-            box-sizing: border-box; /* Důležité pro správné zobrazení */
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        /* --- PATIČKA --- */
-        .footer {
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
-            border-top: 1px solid var(--color-surface);
-        }
-
-        /* --- RESPONZIVITA --- */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 1.8rem; }
-            .hero { padding: 80px 20px; }
-        }
-
-        /* Default: show text, hide link */
-        .call-link { display: none; }
-        .call-text { display: inline-block; }
-
-        /* On small screens (mobile) show link, hide text */
-        @media (max-width: 768px) {
-          .call-link { display: inline-block }
-          .call-text { display: none; }
-        }
-
-        /* --- LIGHTBOX / GALLERY PREVIEW --- */
+    /* --- LIGHTBOX / GALLERY PREVIEW --- */
         .lightbox-overlay {
             position: fixed;
             inset: 0;
@@ -320,323 +210,714 @@
         .lightbox-prev { left: 8px; }
         .lightbox-next { right: 8px; }
 
-    </style>
+    /* ── Form inputs ─────────────────────────── */
+    .form-input {
+      background: #f8f8f8;
+      border: 1.5px solid transparent;
+      transition: border-color .2s, background .2s;
+    }
+    .form-input:focus {
+      background: #fff;
+      border-color: #D97706;
+      outline: none;
+    }
 
-    <!-- Hotjar Tracking Code for https://nabytek.kutilhonza.cz/ -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:6538784,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
+    /* ── Scrollbar ───────────────────────────── */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #111; }
+    ::-webkit-scrollbar-thumb { background: #D97706; border-radius: 3px; }
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11529391298"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-11529391298');
-    </script>
-
-    <!-- Meta Pixel Code -->
-        <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1530646648175296');
-        fbq('track', 'PageView');
-        </script>
-        <noscript><img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1530646648175296&ev=PageView&noscript=1"
-        /></noscript>
-    <!-- End Meta Pixel Code -->
-
+    /* ── Amber underline decoration ─────────── */
+    .amber-line::after {
+      content: '';
+      display: block;
+      width: 3rem;
+      height: 3px;
+      background: #D97706;
+      margin-top: .75rem;
+    }
+    .amber-line-center::after {
+      content: '';
+      display: block;
+      width: 3rem;
+      height: 3px;
+      background: #D97706;
+      margin: .75rem auto 0;
+    }
+  </style>
 </head>
-<body>
 
-    <header class="hero">
-        <div style="background-color: rgba(0, 0, 0, 0.6); padding: 50px 10px">
-            <h1>Nábytek na míru v Plzni a okolí</h1>
-            <p class="motto">Váš prostor, vaše pravidla, vaše skříň.</p>
-            <p>
-                Nebaví nás kompromisy s nábytkem z obchodních řetězců! Vytvoříme pro vás úložné prostory, které perfektně zapadnou do interiéru a využijí každý centimetr místa. Precizní montáž, osobní přístup a řešení přesně podle vašich představ. provádíme servis i opravy – včetně pozáručních a domácích realizací.
-            </p>
-            <div>
-                <a style="margin-top: 10px;" class="cta-button" href="tel:+420603381044">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></svg>
-                    603 381 044
-                </a>
+<body class="font-sans antialiased bg-white text-stone-900">
 
-                <a style="margin-top: 10px;" class="cta-button call-link" href="mailto:nabytek@kutilhonza.cz">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg>
-                    Napsat
-                </a>
-                <span style="margin-top: 10px;" class="cta-button call-text">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg>
-                    nabytek@kutilhonza.cz
-                </span>
-                <a style="margin-top: 10px;" href="#kontakt" class="cta-button" style="margin-bottom: 50px" data-umami-event="show-form-button">Napište mi ✅</a>
-            </div>
+  <!-- ══════════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════════ -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="icon.png" alt="" class="h-9 w-9 rounded-full object-cover ring-2 ring-white/20"
+             onerror="this.style.display='none'">
+        <span id="nav-brand" class="font-bold text-lg text-white tracking-tight drop-shadow">Skříně na míru</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#sluzby"      id="nl1" class="text-white/80 hover:text-white transition">Služby</a>
+        <a href="#pristup"     id="nl2" class="text-white/80 hover:text-white transition">O mně</a>
+        <a href="#galerie"     id="nl3" class="text-white/80 hover:text-white transition">Galerie</a>
+        <a href="#kontakt-info" id="nl4" class="text-white/80 hover:text-white transition">Kontakt</a>
+      </nav>
+
+      <a href="#poptavka"
+         class="bg-amber-500 hover:bg-amber-400 text-white text-sm font-bold px-5 py-2.5 rounded-lg
+                transition shadow-lg shadow-amber-500/30 hover:shadow-amber-400/40"
+         data-umami-event="show-form-button"
+       >
+        Poptávka zdarma
+      </a>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-screen flex flex-col">
+    <img src="hero.png" alt="Vestavěné skříně na míru Plzeň"
+         class="absolute inset-0 w-full h-full object-cover">
+    <div class="hero-bg absolute inset-0"></div>
+
+    <!-- Obsah -->
+    <div class="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 pt-28 pb-36">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20
+                  text-white/90 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+        Plzeň a okolí &nbsp;·&nbsp; Přijímám zakázky
+      </div>
+
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-none tracking-tight mb-6">
+        Vestavěné skříně<br>
+        <span class="text-amber-400">na míru</span><br>
+        v Plzni
+      </h1>
+
+      <p class="text-lg sm:text-xl text-white/70 max-w-xl mx-auto leading-relaxed mb-10">
+        Montáž, opravy a pozáruční servis.<br>Individuální přístup ke každé zakázce.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#poptavka"
+           class="inline-flex items-center justify-center gap-2.5 bg-amber-500 hover:bg-amber-400
+                  text-white font-bold text-base px-8 py-4 rounded-xl transition
+                  shadow-2xl shadow-amber-500/40 hover:shadow-amber-400/50 hover:-translate-y-0.5 transform"
+           data-umami-event="show-form-button"
+        >
+          Nezávazná poptávka
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+        <a href="#galerie"
+           class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20
+                  backdrop-blur-sm text-white font-semibold text-base px-8 py-4
+                  rounded-xl border border-white/25 transition">
+          Galerie realizací
+        </a>
+      </div>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="relative z-10 border-t border-white/10 bg-black/50 backdrop-blur-sm">
+      <div class="max-w-4xl mx-auto grid grid-cols-3 divide-x divide-white/10">
+        <div class="py-6 text-center">
+          <div class="text-3xl sm:text-4xl font-black text-white tabular-nums">10+</div>
+          <div class="text-xs text-white/50 uppercase tracking-widest mt-1">let praxe</div>
         </div>
-    </header>
+        <div class="py-6 text-center">
+          <div class="text-3xl sm:text-4xl font-black text-amber-400 tabular-nums">500+</div>
+          <div class="text-xs text-white/50 uppercase tracking-widest mt-1">zakázek</div>
+        </div>
+        <div class="py-6 text-center">
+          <div class="text-3xl sm:text-4xl font-black text-white tabular-nums">100%</div>
+          <div class="text-xs text-white/50 uppercase tracking-widest mt-1">na míru</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="benefits-banner">
-        <div class="benefits-grid">
-            <div class="benefit">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                <h3>Kvalita řemesla</h3>
-                <p>Důraz na detail a poctivé zpracování pro maximální životnost.</p>
+  <!-- ══════════════════════════════════════════════
+       SLUŽBY  (tmavá sekce)
+  ══════════════════════════════════════════════ -->
+  <section id="sluzby" class="bg-stone-950 py-24">
+    <div class="max-w-5xl mx-auto px-6">
+
+      <div class="mb-16 reveal">
+        <p class="text-amber-500 text-xs font-bold uppercase tracking-widest mb-4">Co dělám</p>
+        <h2 class="text-4xl sm:text-5xl font-black text-white leading-tight amber-line">
+          Moje služby
+        </h2>
+      </div>
+
+      <!-- Numbered list -->
+      <div>
+
+        <div class="svc-row group px-2 py-6 rounded-lg -mx-2 cursor-default reveal">
+          <div class="flex items-start gap-5 sm:gap-8">
+            <span class="text-4xl font-black text-amber-500/30 tabular-nums leading-none w-14 shrink-0 group-hover:text-amber-500 transition-colors duration-300">01</span>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-200">Výroba vestavěných skříní na míru</h3>
+              <p class="svc-desc text-stone-400 text-sm mt-1">Návrh a výroba skříní přesně do vašeho prostoru – jakékoli rozměry, dispozice i stropy.</p>
             </div>
-            <div class="benefit">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
-                <h3>Využití každého centimetru</h3>
-                <p>Optimální využití celého místa</p>
-            </div>
-            <div class="benefit">
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.472-2.472a3.375 3.375 0 00-4.773-4.773L6.75 10.5M11.42 15.17L6.75 10.5m4.67 4.67L6.75 10.5" /></svg>
-                <h3>Kompletní služba</h3>
-                <p>Od návrhu a zaměření, přes montáž až po finální úklid.</p>
-            </div>
-            <div class="benefit">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.483a.75.75 0 001.06-1.06A7.5 7.5 0 013.75 12c0-3.866 3.582-7 8.25-7s8.25 3.134 8.25 7-3.582 7-8.25 7A7.5 7.5 0 016.273 6.517.75.75 0 005.214 7.58a9 9 0 006.786 12.67z" /></svg>
-                <h3>Osobní přístup</h3>
-                <p>Naslouchám vašim potřebám a přizpůsobím řešení na míru.</p>
-            </div>
+            <svg class="svc-arrow w-5 h-5 text-stone-600 group-hover:text-amber-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
         </div>
 
-        <div class="benefits-grid">
-            <div class="benefit">
-                <h3>Pozáruční servis</h3>
-                <p>Provádíme také servis skříní u kterých Váš dodavatel již není ochotný servis provést.</p>
+        <div class="svc-row group px-2 py-6 rounded-lg -mx-2 cursor-default reveal reveal-delay-1">
+          <div class="flex items-start gap-5 sm:gap-8">
+            <span class="text-4xl font-black text-amber-500/30 tabular-nums leading-none w-14 shrink-0 group-hover:text-amber-500 transition-colors duration-300">02</span>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-200">Montáž vestavěných skříní</h3>
+              <p class="svc-desc text-stone-400 text-sm mt-1">Profesionální montáž nových skříní včetně ukotvení, seřízení a finálních úprav.</p>
             </div>
+            <svg class="svc-arrow w-5 h-5 text-stone-600 group-hover:text-amber-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
         </div>
-    </section>
 
-    <main>
-        <section id="sluzby" class="container">
-            <h2>Od nápadu k dokonalé skříni</h2>
-            <div class="service-description">
-                <div class="service-item">
-                    <h3>Osobní konzultace a zaměření</h3>
-                    <p>Přijedu přímo k vám, probereme vaše představy, požadavky na vnitřní uspořádání a doporučím nejvhodnější materiály a kování. Vše si pečlivě zaměřím, abychom využili prostor na maximum.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Profesionální montáž</h3>
-                    <p>Samotnou montáž provádím s maximální precizností. Ať už se jedná o vestavěné skříně, šatny nebo atypické úložné prostory, můžete se spolehnout na profesionálně odvedenou práci.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Kvalita a spolehlivost</h3>
-                    <p>Pracuji s kvalitními materiály od ověřených dodavatelů, aby vám nová skříň sloužila spolehlivě dlouhá léta. Mým cílem je vaše naprostá spokojenost s výsledkem.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Čistota a finální předání</h3>
-                    <p>Po dokončení montáže po sobě zanechám perfektně uklizený prostor. Novou skříň vám předám plně funkční a připravenou k okamžitému používání.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Individuální návrh řešení</h3>
-                    <p>Každý interiér je jiný, proto vytvářím řešení na míru. Připravím pro vás návrh, který bude ladit s vaším stylem a zároveň prakticky využije dostupný prostor.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Rychlá realizace</h3>
-                    <p>Dbám na efektivní postup práce, abyste novou skříň mohli začít používat co nejdříve, aniž by trpěla kvalita montáže.</p>
-                </div>
-
+        <div class="svc-row group px-2 py-6 rounded-lg -mx-2 cursor-default reveal reveal-delay-2">
+          <div class="flex items-start gap-5 sm:gap-8">
+            <span class="text-4xl font-black text-amber-500/30 tabular-nums leading-none w-14 shrink-0 group-hover:text-amber-500 transition-colors duration-300">03</span>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-200">Servis vestavěných skříní</h3>
+              <p class="svc-desc text-stone-400 text-sm mt-1">Pravidelný servis a preventivní údržba pro bezchybný a tichý chod.</p>
             </div>
-        </section>
+            <svg class="svc-arrow w-5 h-5 text-stone-600 group-hover:text-amber-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
+        </div>
 
-        <section id="galerie" class="container">
-            <h2>Ukázky naší práce</h2>
-            <div class="gallery-grid">
-
-                <div class="gallery-item"><img src="/roh1.jpg" alt="Rohová skříň 1."> <p>Rohová skříň - Příprava</p></div>
-                <div class="gallery-item"><img src="/roh2.jpg" alt="Rohová skříň 2."> <p>Rohová skříň - Montáž</p></div>
-                <div class="gallery-item"><img src="/roh3.jpg" alt="Rohová skříň 3."> <p>Rohová skříň - Výsledek</p></div>
-
-                <div class="gallery-item"><img src="/kolejnice1.jpg" alt="Výěmna kolejnice"> <p>Výměna kolejnice<br>Cena: 4tis Kč</p></div>
-                <div class="gallery-item"><img src="/e3.jpg" alt="Ukázka práce 3"> <p>Ukázka výsledku montáže<br>Cena: 55tis Kč</p></div>
-                <div class="gallery-item"><img src="/s1.jpg" alt="Servis koleček"> <p>Servis koleček<br>Cena: 4tis Kč</p></div>
-
-                <div class="gallery-item"><img src="/e1.jpg" alt="Ukázka práce 1"> <p>Skříň na míru do ložnice<br>Cena: 45tis Kč</p></div>
-                <div class="gallery-item"><img src="/e2.jpg" alt="Ukázka práce 2"> <p>Skříň do chodby<br>Cena: 40tis Kč</p></div>
-                <div class="gallery-item"><img src="/pojezdy1.jpg" alt="Výměna pojezdů"> <p>Zbroušení kolejnice a výměna pojezdů<br>Cena: 3tis Kč</p></div>
-
-                <div class="gallery-item"><img src="/seda1.jpg" alt="šedá skříň"> <p>Úzká skříň do pokoje<br>Cena komplet: 45 tisíc</p></div>
-                <div class="gallery-item"><img src="/s3.jpg" alt="Servis lišty"> <p>Servis horní lišty<br>Cena: 7tis Kč</p></div>
-                <div class="gallery-item"><img src="/s4.jpg" alt="Servis těsnění"> <p>Přilepení těsnění<br>Cena: 2tis Kč</p></div>
-
-                <div class="gallery-item"><img src="/e5.jpg" alt="Ukázka práce 4"> <p>Skříň přesně do obýváku<br>Cena: 40tis Kč</p></div>
-                <div class="gallery-item"><img src="/postel.jpg" alt="Postel"> <p>Složení postele<br>Cena: 6tis Kč</p></div>
-                <div class="gallery-item"><img src="/s2.jpg" alt="Servis kolejnic"> <p>Servis kolejnic<br>Cena: 5tis Kč</p></div>
-
-                <div class="gallery-item"><img src="/seda2.jpg" alt="šedá dva"> <p>Tmavě šedá skříň s postelí<br>celkem 43 000 Kč</p></div>
-                <div class="gallery-item"><img src="/svetla1.jpg" alt="Béžová skříň"> <p>Béžová skříň do ložnice<br>Cena s montáží 82 tisíc Kč</p></div>
+        <div class="svc-row group px-2 py-6 rounded-lg -mx-2 cursor-default reveal reveal-delay-3">
+          <div class="flex items-start gap-5 sm:gap-8">
+            <span class="text-4xl font-black text-amber-500/30 tabular-nums leading-none w-14 shrink-0 group-hover:text-amber-500 transition-colors duration-300">04</span>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-200">Pozáruční opravy</h3>
+              <p class="svc-desc text-stone-400 text-sm mt-1">Opravy po skončení záruky – rychle, spolehlivě, bez zbytečného čekání.</p>
             </div>
-        </section>
+            <svg class="svc-arrow w-5 h-5 text-stone-600 group-hover:text-amber-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
+        </div>
 
-        <section id="kontakt" class="container">
-            <h2>Napište mi</h2>
-            <div class="contact-section">
-                <div class="contact-flex">
-                    <div class="contact-info">
-                        <h3>Kontaktujte nás</h3>
-                        <p>Máte specifické přání nebo potřebujete poradit s nejlepším řešením pro váš domov? Neváhejte nás kontaktovat.<br>Rád s vámi proberu všechny možnosti.</p>
-                        <p>
-                            <strong>Kutil Honza</strong>
-                        </p>
-                        <p>
-                            📞 <strong>Telefon:</strong> <a href="tel:+420603381044">+420 603 381 044</a>
-                            <br> 📧 <strong>E-mail:</strong> <a href="mailto:nabytek@kutilhonza.cz">nabytek@kutilhonza.cz</a>
-                            <br>🗺️  Lokace: Plzen, Jugoslávská 2
-                            <br>📷 Instagram: <a href="https://www.instagram.com/nabytekplzen/">nabytek_plzen</a></p>
-                        </p>
-                    </div>
-                    <div class="contact-form">
-                        <h3>Rychlá zpráva</h3>
-                        <form action="/form.php" method="POST" id="contactForm">
-                            <div class="form-group">
-                                <label for="name">Vaše jméno (nepovinné):</label>
-                                <input type="text" id="name" name="name">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Kontakt na Vás (Email, telefon, ...)</label>
-                                <input id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Vaše zpráva (stručně popište vaši představu):</label>
-                                <textarea id="message" name="message" required></textarea>
-                            </div>
-                            <button type="submit" class="cta-button">Odeslat zprávu</button>
-                        </form>
-                        <div id="formResponse" style="margin-top:10px;"></div>
-                    </div>
-                </div>
+        <div class="svc-row group px-2 py-6 rounded-lg -mx-2 cursor-default reveal">
+          <div class="flex items-start gap-5 sm:gap-8">
+            <span class="text-4xl font-black text-amber-500/30 tabular-nums leading-none w-14 shrink-0 group-hover:text-amber-500 transition-colors duration-300">05</span>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-200">Seřízení dveří</h3>
+              <p class="svc-desc text-stone-400 text-sm mt-1">Přesné seřízení posuvných i otočných dveří, eliminace vrzání a zasekávání.</p>
             </div>
-        </section>
+            <svg class="svc-arrow w-5 h-5 text-stone-600 group-hover:text-amber-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
+        </div>
 
-        <section id="mapa" class="container">
-            <h2 style="margin-bottom: 20px;">Najdete nás v <b>Plzni</b></h2>
-        </section>
-    </main>
+        <div class="svc-row group px-2 py-6 rounded-lg -mx-2 cursor-default reveal reveal-delay-1">
+          <div class="flex items-start gap-5 sm:gap-8">
+            <span class="text-4xl font-black text-amber-500/30 tabular-nums leading-none w-14 shrink-0 group-hover:text-amber-500 transition-colors duration-300">06</span>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-200">Výměna kolejnic</h3>
+              <p class="svc-desc text-stone-400 text-sm mt-1">Výměna opotřebovaných nebo poškozených kolejnic za nové originální díly.</p>
+            </div>
+            <svg class="svc-arrow w-5 h-5 text-stone-600 group-hover:text-amber-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
+        </div>
 
-    <footer class="footer">
-        <p>&copy; 2025 Kutil Honza - Montáž skříní na míru Plzeň | Vytvořeno s péčí</p>
-    </footer>
+        <div class="svc-row group px-2 py-6 rounded-lg -mx-2 cursor-default reveal reveal-delay-2">
+          <div class="flex items-start gap-5 sm:gap-8">
+            <span class="text-4xl font-black text-amber-500/30 tabular-nums leading-none w-14 shrink-0 group-hover:text-amber-500 transition-colors duration-300">07</span>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-200">Výměna pojezdů</h3>
+              <p class="svc-desc text-stone-400 text-sm mt-1">Náhrada opotřebených pojezdových koleček pro hladký a tichý chod dveří.</p>
+            </div>
+            <svg class="svc-arrow w-5 h-5 text-stone-600 group-hover:text-amber-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
+        </div>
 
+        <div class="svc-row group px-2 py-6 rounded-lg -mx-2 cursor-default reveal reveal-delay-3" style="border-bottom:none">
+          <div class="flex items-start gap-5 sm:gap-8">
+            <span class="text-4xl font-black text-amber-500/30 tabular-nums leading-none w-14 shrink-0 group-hover:text-amber-500 transition-colors duration-300">08</span>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-200">Úpravy starších skříní</h3>
+              <p class="svc-desc text-stone-400 text-sm mt-1">Modernizace a přizpůsobení starších skříní novým potřebám nebo prostoru.</p>
+            </div>
+            <svg class="svc-arrow w-5 h-5 text-stone-600 group-hover:text-amber-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
+        </div>
 
-<script>
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
+      </div>
 
-    const form = e.target;
-    const formData = new FormData(form);
+      <!-- Note + CTA -->
+      <div class="mt-14 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 reveal">
+        <p class="text-stone-500 text-sm">Individuální kalkulace podle konkrétní zakázky.</p>
+        <a href="#poptavka"
+           class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-white
+                  font-bold text-sm px-6 py-3.5 rounded-xl transition shadow-lg shadow-amber-500/25 whitespace-nowrap"
+           data-umami-event="show-form-button"
+        >
+          Nezávazná poptávka
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
 
-    try {
-        const response = await fetch('form.php', {
-            method: 'POST',
-            body: formData
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       INDIVIDUÁLNÍ PŘÍSTUP
+  ══════════════════════════════════════════════ -->
+  <section id="pristup" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Quote / dark card -->
+        <div class="reveal">
+          <div class="bg-stone-950 rounded-3xl p-10 relative overflow-hidden">
+            <!-- Dekorativní velký apostrof -->
+            <div class="absolute -top-4 -right-2 text-[12rem] leading-none font-black text-white/[0.03] select-none pointer-events-none">&ldquo;</div>
+
+            <svg class="w-8 h-8 text-amber-500 mb-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+
+            <blockquote class="text-xl sm:text-2xl font-semibold text-white leading-snug mb-8">
+              "Nedělám montáže od stolu. Vždy přijedu, podívám se na situaci na místě a navrhnu řešení, které opravdu funguje."
+            </blockquote>
+
+            <div class="flex items-center gap-4 pt-6 border-t border-white/10">
+              <img src="icon.png" alt="Kutil Honza" class="w-11 h-11 rounded-full object-cover ring-2 ring-amber-500/40"
+                   onerror="this.style.display='none'">
+              <div>
+                <div class="font-bold text-white">Kutil Honza</div>
+                <div class="text-sm text-stone-500">Montér vestavěných skříní · Plzeň</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature points -->
+        <div>
+          <p class="text-amber-600 text-xs font-bold uppercase tracking-widest mb-4 reveal">Proč vybrat mě</p>
+          <h2 class="text-4xl sm:text-5xl font-black text-stone-900 leading-tight mb-10 amber-line reveal reveal-delay-1">
+            Individuální<br>přístup ke<br>každé zakázce
+          </h2>
+
+          <div class="space-y-8">
+
+            <div class="flex gap-5 items-start reveal reveal-delay-1">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-stone-900 text-lg mb-1">Každá skříň je jiná</h3>
+                <p class="text-stone-500 text-sm leading-relaxed">
+                  Nestandardní rozměry, šikmé stropy, složité dispozice – se vším si poradím. Žádná zakázka není příliš složitá.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-5 items-start reveal reveal-delay-2">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-stone-900 text-lg mb-1">Řešení šité na míru prostoru</h3>
+                <p class="text-stone-500 text-sm leading-relaxed">
+                  Nejprve přijdu, prohlédnu prostor a teprve pak navrhneme nejlepší řešení. Kalkulace vždy podle konkrétní zakázky.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-5 items-start reveal reveal-delay-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-stone-900 text-lg mb-1">Osobní přístup</h3>
+                <p class="text-stone-500 text-sm leading-relaxed">
+                  Komunikujete přímo se mnou od první zprávy až po předání hotové práce. Žádní prostředníci, žádné nedorozumění.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       GALERIE
+  ══════════════════════════════════════════════ -->
+  <section id="galerie" class=" py-24 bg-stone-50" style="display: flex;justify-content: center;align-items: center;">
+    <div class="container gallery-grid">
+      <div class="gallery-item"><img src="/fotografie/roh1.jpg" alt="Rohová skříň 1."> <p>Rohová skříň - Příprava</p></div>
+      <div class="gallery-item"><img src="/fotografie/roh2.jpg" alt="Rohová skříň 2."> <p>Rohová skříň - Montáž</p></div>
+      <div class="gallery-item"><img src="/fotografie/roh3.jpg" alt="Rohová skříň 3."> <p>Rohová skříň - Výsledek</p></div>
+
+      <div class="gallery-item"><img src="/fotografie/kolejnice1.jpg" alt="Výěmna kolejnice"> <p>Výměna kolejnice<br>Cena: 4tis Kč</p></div>
+      <div class="gallery-item"><img src="/fotografie/e3.jpg" alt="Ukázka práce 3"> <p>Ukázka výsledku montáže<br>Cena: 55tis Kč</p></div>
+      <div class="gallery-item"><img src="/fotografie/s1.jpg" alt="Servis koleček"> <p>Servis koleček<br>Cena: 4tis Kč</p></div>
+
+      <div class="gallery-item"><img src="/fotografie/e1.jpg" alt="Ukázka práce 1"> <p>Skříň na míru do ložnice<br>Cena: 45tis Kč</p></div>
+      <div class="gallery-item"><img src="/fotografie/e2.jpg" alt="Ukázka práce 2"> <p>Skříň do chodby<br>Cena: 40tis Kč</p></div>
+      <div class="gallery-item"><img src="/fotografie/pojezdy1.jpg" alt="Výměna pojezdů"> <p>Zbroušení kolejnice a výměna pojezdů<br>Cena: 3tis Kč</p></div>
+
+      <div class="gallery-item"><img src="/fotografie/seda1.jpg" alt="šedá skříň"> <p>Úzká skříň do pokoje<br>Cena komplet: 45 tisíc</p></div>
+      <div class="gallery-item"><img src="/fotografie/s3.jpg" alt="Servis lišty"> <p>Servis horní lišty<br>Cena: 7tis Kč</p></div>
+      <div class="gallery-item"><img src="/fotografie/s4.jpg" alt="Servis těsnění"> <p>Přilepení těsnění<br>Cena: 2tis Kč</p></div>
+
+      <div class="gallery-item"><img src="/fotografie/e5.jpg" alt="Ukázka práce 4"> <p>Skříň přesně do obýváku<br>Cena: 40tis Kč</p></div>
+      <div class="gallery-item"><img src="/fotografie/postel.jpg" alt="Postel"> <p>Složení postele<br>Cena: 6tis Kč</p></div>
+      <div class="gallery-item"><img src="/fotografie/s2.jpg" alt="Servis kolejnic"> <p>Servis kolejnic<br>Cena: 5tis Kč</p></div>
+
+      <div class="gallery-item"><img src="/fotografie/seda2.jpg" alt="šedá dva"> <p>Tmavě šedá skříň s postelí<br>celkem 43 000 Kč</p></div>
+      <div class="gallery-item"><img src="/fotografie/svetla1.jpg" alt="Béžová skříň"> <p>Béžová skříň do ložnice<br>Cena s montáží 82 tisíc Kč</p></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FORMULÁŘ
+  ══════════════════════════════════════════════ -->
+  <section id="poptavka" class="py-24 bg-white">
+    <div class="max-w-2xl mx-auto px-6">
+
+      <div class="text-center mb-12 reveal">
+        <p class="text-amber-600 text-xs font-bold uppercase tracking-widest mb-4">Kontakt</p>
+        <h2 class="text-4xl sm:text-5xl font-black text-stone-900 leading-tight mb-4">
+          Napište mi
+        </h2>
+        <p class="text-stone-500">Nezávazná poptávka. Ozvu se do 24 hodin.</p>
+      </div>
+
+      <form id="contact-form" class="reveal reveal-delay-1">
+
+        <div class="mb-5">
+          <label class="block text-sm font-semibold text-stone-700 mb-2">
+            Jméno <span class="font-normal text-stone-400">(nepovinné)</span>
+          </label>
+          <input type="text" id="name" name="name" placeholder="Vaše jméno"
+                 class="form-input w-full px-4 py-4 rounded-xl text-stone-900 placeholder:text-stone-400 text-sm">
+        </div>
+
+        <div class="mb-5">
+          <label class="block text-sm font-semibold text-stone-700 mb-2">
+            Kontakt <span class="text-red-500">*</span>
+            <span class="font-normal text-stone-400">(telefon nebo email)</span>
+          </label>
+          <input type="text" id="contact" name="contact" required
+                 placeholder="+420 xxx xxx xxx nebo email@example.com"
+                 class="form-input w-full px-4 py-4 rounded-xl text-stone-900 placeholder:text-stone-400 text-sm">
+        </div>
+
+        <div class="mb-8">
+          <label class="block text-sm font-semibold text-stone-700 mb-2">
+            Zpráva <span class="text-red-500">*</span>
+          </label>
+          <textarea id="message" name="message" required rows="5"
+                    placeholder="Popište, co potřebujete – typ skříně, problém, nebo napište že chcete zavolat..."
+                    class="form-input w-full px-4 py-4 rounded-xl text-stone-900 placeholder:text-stone-400 text-sm resize-none"></textarea>
+        </div>
+
+        <div id="form-error"   class="hidden mb-5 px-4 py-3.5 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm"></div>
+        <div id="form-success" class="hidden mb-5 px-4 py-3.5 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-700 text-sm text-center font-medium"></div>
+
+        <button type="submit" id="submit-btn"
+                class="w-full bg-stone-950 hover:bg-stone-800 text-white font-bold text-base
+                       py-4.5 py-[1.1rem] rounded-xl transition flex items-center justify-center gap-2.5
+                       shadow-xl shadow-stone-900/20">
+          <span id="submit-text">Odeslat poptávku</span>
+          <svg id="submit-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+          <svg id="submit-spinner" class="hidden w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+          </svg>
+        </button>
+
+        <p class="text-xs text-stone-400 text-center mt-4">
+          Odesláním souhlasíte se zpracováním osobních údajů za účelem odpovědi na vaši poptávku.
+        </p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       KONTAKT
+  ══════════════════════════════════════════════ -->
+  <section id="kontakt-info" class="bg-stone-950 py-20">
+    <div class="max-w-5xl mx-auto px-6">
+
+      <div class="text-center mb-14 reveal">
+        <h2 class="text-4xl sm:text-5xl font-black text-white mb-3">Montáž a servis vestavěných skříní</h2>
+        <p class="text-stone-500">Najdete nás v Plzni</p>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+
+        <a href="tel:+420603381044" class="group reveal">
+          <div class="flex flex-col items-center gap-4 border border-stone-800 hover:border-amber-500/50
+                      bg-stone-900 hover:bg-stone-800/80 rounded-2xl p-7 transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-stone-800 group-hover:bg-amber-500/20 flex items-center justify-center transition-colors duration-300">
+              <svg class="w-5 h-5 text-stone-400 group-hover:text-amber-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+            </div>
+            <div class="text-center">
+              <div class="text-xs text-stone-600 uppercase tracking-widest mb-1.5">Telefon</div>
+              <div class="font-bold text-white text-sm">+420 603 381 044</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="mailto:nabytek@kutilhonza.cz" class="group reveal reveal-delay-1">
+          <div class="flex flex-col items-center gap-4 border border-stone-800 hover:border-amber-500/50
+                      bg-stone-900 hover:bg-stone-800/80 rounded-2xl p-7 transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-stone-800 group-hover:bg-amber-500/20 flex items-center justify-center transition-colors duration-300">
+              <svg class="w-5 h-5 text-stone-400 group-hover:text-amber-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div class="text-center">
+              <div class="text-xs text-stone-600 uppercase tracking-widest mb-1.5">Email</div>
+              <div class="font-bold text-white text-sm break-all">nabytek@kutilhonza.cz</div>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/nabytek_plzen" target="_blank" rel="noopener" class="group reveal reveal-delay-2">
+          <div class="flex flex-col items-center gap-4 border border-stone-800 hover:border-amber-500/50
+                      bg-stone-900 hover:bg-stone-800/80 rounded-2xl p-7 transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-stone-800 group-hover:bg-amber-500/20 flex items-center justify-center transition-colors duration-300">
+              <svg class="w-5 h-5 text-stone-400 group-hover:text-amber-500 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <div class="text-center">
+              <div class="text-xs text-stone-600 uppercase tracking-widest mb-1.5">Instagram</div>
+              <div class="font-bold text-white text-sm">nabytek_plzen</div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="bg-black py-6 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-stone-600">
+      <span>&copy; 2025 Kutil Honza &mdash; Montáž a servis vestavěných skříní, Plzeň</span>
+      <span class="text-stone-700">Montáž a servis vestavěných skříní</span>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════
+       LIGHTBOX
+  ══════════════════════════════════════════════ -->
+  <div id="lightbox" class="lightbox-overlay" role="dialog" aria-hidden="true">
+      <div class="lightbox-content">
+          <button class="lightbox-close" id="lightboxClose" aria-label="Zavřít">×</button>
+          <img id="lightboxImg" class="lightbox-img" src="" alt="">
+          <div id="lightboxCaption" class="lightbox-caption"></div>
+          <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Předchozí">‹</button>
+          <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Další">›</button>
+      </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       JS
+  ══════════════════════════════════════════════ -->
+  <script>
+    // ── Navbar scroll effect ────────────────────────────────────────────
+    const navbar   = document.getElementById('navbar');
+    const navBrand = document.getElementById('nav-brand');
+    const navLinks = ['nl1','nl2','nl3','nl4'].map(id => document.getElementById(id));
+
+    function updateNav() {
+      const scrolled = window.scrollY > 70;
+      navbar.style.background    = scrolled ? 'rgba(255,255,255,0.97)' : 'transparent';
+      navbar.style.backdropFilter = scrolled ? 'blur(12px)' : 'none';
+      navbar.style.boxShadow     = scrolled ? '0 1px 20px rgba(0,0,0,.08)' : 'none';
+      navBrand.style.color       = scrolled ? '#1c1917' : '#fff';
+      navLinks.forEach(a => { if (a) a.style.color = scrolled ? '#57534e' : 'rgba(255,255,255,.8)'; });
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+
+    // ── Scroll reveal ───────────────────────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // ── Lightbox ────────────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', function() {
+        const items = Array.from(document.querySelectorAll('.gallery-item'));
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const closeBtn = document.getElementById('lightboxClose');
+        const prevBtn = document.getElementById('lightboxPrev');
+        const nextBtn = document.getElementById('lightboxNext');
+        let current = -1;
+
+        items.forEach((item, idx) => {
+            const image = item.querySelector('img');
+            item.style.cursor = 'zoom-in';
+            item.addEventListener('click', () => {
+                current = idx;
+                openLightbox(image.src, item.querySelector('p')?.innerText || image.alt || '');
+            });
         });
 
-        const result = await response.json();
-        const output = document.getElementById('formResponse');
-
-        if (result.status === 'success') {
-            output.style.color = 'green';
-            output.textContent = result.message;
-            form.reset();
-        } else {
-            output.style.color = 'red';
-            output.textContent = result.message;
+        function openLightbox(src, text) {
+            lightboxImg.src = src;
+            lightboxImg.alt = text || '';
+            lightboxCaption.textContent = text || '';
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
         }
 
-    } catch (error) {
-        document.getElementById('formResponse').textContent = "Nastala chyba: " + error;
-    }
-});
-</script>
-</body>
-</html>
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            lightboxImg.src = '';
+            current = -1;
+        }
 
-<!-- Lightbox overlay -->
-<div id="lightbox" class="lightbox-overlay" role="dialog" aria-hidden="true">
-    <div class="lightbox-content">
-        <button class="lightbox-close" id="lightboxClose" aria-label="Zavřít">×</button>
-        <img id="lightboxImg" class="lightbox-img" src="" alt="">
-        <div id="lightboxCaption" class="lightbox-caption"></div>
-        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Předchozí">‹</button>
-        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Další">›</button>
-    </div>
-</div>
-
-<script>
-// Lightbox behaviour
-document.addEventListener('DOMContentLoaded', function() {
-    const items = Array.from(document.querySelectorAll('.gallery-item'));
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxCaption = document.getElementById('lightboxCaption');
-    const closeBtn = document.getElementById('lightboxClose');
-    const prevBtn = document.getElementById('lightboxPrev');
-    const nextBtn = document.getElementById('lightboxNext');
-    let current = -1;
-
-    items.forEach((item, idx) => {
-        const image = item.querySelector('img');
-        item.style.cursor = 'zoom-in';
-        item.addEventListener('click', () => {
+        function showByIndex(idx) {
+            if (items.length === 0) return;
+            if (idx < 0) idx = items.length - 1;
+            if (idx >= items.length) idx = 0;
             current = idx;
-            openLightbox(image.src, item.querySelector('p')?.innerText || image.alt || '');
+            const imgEl = items[current].querySelector('img');
+            openLightbox(imgEl.src, items[current].querySelector('p')?.innerText || imgEl.alt || '');
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showByIndex(current - 1); });
+        nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showByIndex(current + 1); });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('open')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showByIndex(current - 1);
+            if (e.key === 'ArrowRight') showByIndex(current + 1);
         });
     });
 
-    function openLightbox(src, text) {
-        lightboxImg.src = src;
-        lightboxImg.alt = text || '';
-        lightboxCaption.textContent = text || '';
-        lightbox.classList.add('open');
-        lightbox.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-    }
 
-    function closeLightbox() {
-        lightbox.classList.remove('open');
-        lightbox.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-        lightboxImg.src = '';
-        current = -1;
-    }
+    // ── Formulář → Telegram ─────────────────────────────────────────────
+    (function () {
+      const BOT_TOKEN = "5683006293:AAHIoRepm_uhfKfAYW9piJCKYAyDEM_FfAM";
+      const CHAT_ID   = "358369613";
 
-    function showByIndex(idx) {
-        if (items.length === 0) return;
-        if (idx < 0) idx = items.length - 1;
-        if (idx >= items.length) idx = 0;
-        current = idx;
-        const imgEl = items[current].querySelector('img');
-        openLightbox(imgEl.src, items[current].querySelector('p')?.innerText || imgEl.alt || '');
-    }
+      const form       = document.getElementById('contact-form');
+      const btnText    = document.getElementById('submit-text');
+      const btnIcon    = document.getElementById('submit-icon');
+      const spinner    = document.getElementById('submit-spinner');
+      const btn        = document.getElementById('submit-btn');
+      const errBox     = document.getElementById('form-error');
+      const okBox      = document.getElementById('form-success');
 
-    closeBtn.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeLightbox();
-    });
-    prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showByIndex(current - 1); });
-    nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showByIndex(current + 1); });
+      function setLoading(on) {
+        btn.disabled = on;
+        btnText.textContent = on ? 'Odesílám...' : 'Odeslat poptávku';
+        btnIcon.classList.toggle('hidden', on);
+        spinner.classList.toggle('hidden', !on);
+      }
 
-    document.addEventListener('keydown', (e) => {
-        if (!lightbox.classList.contains('open')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') showByIndex(current - 1);
-        if (e.key === 'ArrowRight') showByIndex(current + 1);
-    });
-});
-</script>
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        errBox.classList.add('hidden');
+        okBox.classList.add('hidden');
+
+        const name    = document.getElementById('name').value.trim();
+        const contact = document.getElementById('contact').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!contact) { errBox.textContent = 'Vyplňte prosím kontaktní údaj.'; errBox.classList.remove('hidden'); return; }
+        if (!message)  { errBox.textContent = 'Vyplňte prosím zprávu.';        errBox.classList.remove('hidden'); return; }
+
+        const text = ['Nová poptávka z webu', '',
+          'Jméno: ' + (name || '(neuvedeno)'),
+          'Kontakt: ' + contact,
+          'Zpráva:', message].join('\n');
+
+        setLoading(true);
+        try {
+          const r = await fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ chat_id: CHAT_ID, text })
+          });
+          if (!r.ok) { const d = await r.json().catch(()=>({})); throw new Error(d.description||r.status); }
+          okBox.textContent = '✓ Zpráva odeslána! Ozvu se co nejdříve.';
+          okBox.classList.remove('hidden');
+          form.reset();
+          if (typeof gtag  !== 'undefined') gtag('event','conversion',{'send_to':'AW-11529391298'});
+          if (typeof fbq   !== 'undefined') fbq('track','Lead');
+        } catch (err) {
+          errBox.textContent = 'Nepodařilo se odeslat zprávu. Kontaktujte mě přímo na telefonu nebo emailu.';
+          errBox.classList.remove('hidden');
+          console.error(err);
+        } finally { setLoading(false); }
+
+        umami.track('Form-submit', {
+          name: name,
+          contact: contact,
+          message: message,
+        });
+      });
+
+    })();
+  </script>
+
+</body>
+</html>

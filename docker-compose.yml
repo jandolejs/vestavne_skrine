@@ -1,14 +1,14 @@
 services:
-
-    frontend:
+    web:
         container_name: vestavne_skrine_frontend
+        image: skrine-www
         build:
             context: .
             platforms:
                 - linux/amd64
-        image: ghcr.io/jandolejs/vestavne_skrine:latest
-        ports:
-            - 8078:80
         environment:
-            BASE_URL: nabytek.jandolejs.cz
+            APP_DEBUG: 1
+            TZ: Europe/Prague
+        ports:
+            - "8078:80"
         restart: unless-stopped
