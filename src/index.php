@@ -13,6 +13,7 @@
   <link rel="icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="google-site-verification" content="Kx7e8_udiQdZOXTJG4IA9uNr9jnExoGKOte4o7zWoNg" />
 
   <!-- Umami Analytics -->
   <script defer src="https://umami.jandolejs.cz/script.js" data-website-id="2666c3d1-482f-4a61-ad59-52b153a5bffe"></script>
