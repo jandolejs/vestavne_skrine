@@ -329,11 +329,11 @@
     <div class="relative z-10 border-t border-white/10 bg-black/50 backdrop-blur-sm">
       <div class="max-w-4xl mx-auto grid grid-cols-3 divide-x divide-white/10">
         <div class="py-6 text-center">
-          <div class="text-3xl sm:text-4xl font-black text-white tabular-nums">10+</div>
+          <div class="text-3xl sm:text-4xl font-black text-white tabular-nums">5+</div>
           <div class="text-xs text-white/50 uppercase tracking-widest mt-1">let praxe</div>
         </div>
         <div class="py-6 text-center">
-          <div class="text-3xl sm:text-4xl font-black text-amber-400 tabular-nums">500+</div>
+          <div class="text-3xl sm:text-4xl font-black text-amber-400 tabular-nums">50+</div>
           <div class="text-xs text-white/50 uppercase tracking-widest mt-1">zakázek</div>
         </div>
         <div class="py-6 text-center">
