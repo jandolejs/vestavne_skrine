@@ -13,6 +13,7 @@
   <link rel="icon" href="icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="google-site-verification" content="Kx7e8_udiQdZOXTJG4IA9uNr9jnExoGKOte4o7zWoNg" />
 
   <!-- Umami Analytics -->
   <script defer src="https://umami.jandolejs.cz/script.js" data-website-id="2666c3d1-482f-4a61-ad59-52b153a5bffe"></script>
@@ -717,7 +718,7 @@
           </div>
         </a>
 
-        <a href="https://www.instagram.com/nabytek_plzen" target="_blank" rel="noopener" class="group reveal reveal-delay-2">
+        <a href="https://www.instagram.com/interiery_kh" target="_blank" rel="noopener" class="group reveal reveal-delay-2">
           <div class="flex flex-col items-center gap-4 border border-stone-800 hover:border-amber-500/50
                       bg-stone-900 hover:bg-stone-800/80 rounded-2xl p-7 transition-all duration-300">
             <div class="w-12 h-12 rounded-xl bg-stone-800 group-hover:bg-amber-500/20 flex items-center justify-center transition-colors duration-300">
@@ -727,7 +728,7 @@
             </div>
             <div class="text-center">
               <div class="text-xs text-stone-600 uppercase tracking-widest mb-1.5">Instagram</div>
-              <div class="font-bold text-white text-sm">nabytek_plzen</div>
+              <div class="font-bold text-white text-sm">interiery_kh</div>
             </div>
           </div>
         </a>
