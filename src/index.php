@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PCDVZL35');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Montáž a servis vestavěných skříní – Kutil Honza Plzeň</title>
@@ -50,6 +57,10 @@
 </head>
 
 <body class="font-sans antialiased bg-white text-stone-900">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCDVZL35"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
   <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
@@ -64,9 +75,14 @@
         <a href="#poptavka" id="nl4" class="text-white/80 hover:text-white transition">Rychlá oprava</a>
       </nav>
 
-      <a href="#poptavka" class="bg-amber-500 hover:bg-amber-400 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition shadow-lg">
-        Poptávka zdarma
-      </a>
+      <div class="flex items-center gap-3">
+        <a href="tel:+420603381044" class="bg-white/10 hover:bg-white/20 text-white text-sm font-bold px-4 py-2.5 rounded-lg backdrop-blur-md border border-white/20 transition shadow-lg">
+          📞 <span class="hidden sm:inline">603 381 044</span>
+        </a>
+        <a href="#poptavka" class="bg-amber-500 hover:bg-amber-400 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition shadow-lg">
+          Poptávka zdarma
+        </a>
+      </div>
     </div>
   </header>
 
@@ -81,6 +97,7 @@
         <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto">Provádíme kompletní servis a seřízení vestavěných skříní v Plzni a okolí.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#poptavka" class="bg-amber-500 hover:bg-amber-400 text-white font-bold px-8 py-4 rounded-xl transition shadow-xl">Objednat servis</a>
+            <a href="tel:+420603381044" class="bg-white hover:bg-stone-100 text-stone-900 font-bold px-8 py-4 rounded-xl transition shadow-xl">📞 Zavolat 603 381 044</a>
             <a href="#sluzby" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl backdrop-blur-md border border-white/20 transition">Co všechno děláme?</a>
         </div>
     </div>
@@ -167,6 +184,7 @@
         <div class="text-center mb-12">
             <h2 class="text-4xl font-black mb-4">Potřebujete opravu?</h2>
             <p class="text-stone-500">Popište nám závadu, ozveme se co nejdříve.</p>
+            <p class="text-stone-500 mt-2">Nebo rovnou zavolejte: <a href="tel:+420603381044" class="font-bold text-amber-600 hover:text-amber-500">+420 603 381 044</a></p>
         </div>
         <form id="contact-form" class="space-y-5 bg-white p-8 rounded-2xl shadow-sm border border-stone-200">
             <div>
@@ -202,6 +220,7 @@
 </div>
 
 <footer class="bg-stone-900 py-12 text-center text-white/50 text-sm">
+    <p class="mb-2"><a href="tel:+420603381044" class="text-white/80 hover:text-white">+420 603 381 044</a></p>
     <p>&copy; 2026 Kutil Honza Plzeň</p>
 </footer>
 
@@ -254,6 +273,11 @@
     document.getElementById('lightboxPrev').onclick = (e) => { e.stopPropagation(); move(-1); };
     lightbox.onclick = (e) => { if(e.target === lightbox) document.getElementById('lightboxClose').click(); };
 
+    // Tracking: phone clicks
+    document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+        a.addEventListener('click', () => window.dataLayer.push({ event: 'phone_click', link_url: a.href }));
+    });
+
     // Telegram Form
     const BOT_TOKEN = "5683006293:AAHIoRepm_uhfKfAYW9piJCKYAyDEM_FfAM";
     const CHAT_ID = "358369613";
@@ -278,6 +302,7 @@
                 body: JSON.stringify({ chat_id: CHAT_ID, text })
             });
             if (!r.ok) throw new Error();
+            window.dataLayer.push({ event: 'generate_lead', form_id: 'contact-form' });
             okBox.textContent = '✓ Odesláno!';
             okBox.classList.remove('hidden');
             form.reset();
