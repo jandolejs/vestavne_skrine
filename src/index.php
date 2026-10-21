@@ -84,7 +84,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="tel:+420603381044" class="bg-white/10 hover:bg-white/20 text-white text-sm font-bold px-4 py-2.5 rounded-lg backdrop-blur-md border border-white/20 transition shadow-lg">
+        <a href="tel:+420603381044" class="bg-black/50 hover:bg-black/60 text-white text-sm font-bold px-4 py-2.5 rounded-lg backdrop-blur-md border border-white/20 transition shadow-lg">
           📞 <span class="hidden sm:inline">603 381 044</span>
         </a>
         <a href="#poptavka" class="bg-amber-500 hover:bg-amber-400 text-white text-sm font-bold px-5 py-2.5 rounded-lg transition shadow-lg">
