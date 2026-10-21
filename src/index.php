@@ -10,8 +10,8 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Montáž a servis vestavěných skříní – Kutil Honza Plzeň</title>
-    <meta name="description" content="Montáž, opravy a pozáruční servis vestavěných skříní v Plzni. Výroba na míru, seřízení dveří, výměna kolejnic a pojezdů.">
+    <title>Vestavěné skříně na míru a servis – Kutil Honza Plzeň</title>
+    <meta name="description" content="Výroba a montáž vestavěných skříní na míru v Plzni a okolí. Servis, opravy a seřízení skříní – výměna koleček, kolejnic a pojezdů.">
     <link rel="icon" href="icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -65,14 +65,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
-        <span id="nav-brand" class="font-bold text-lg text-white tracking-tight drop-shadow">Servis Skříní Plzeň</span>
+        <span id="nav-brand" class="font-bold text-lg text-white tracking-tight drop-shadow">Skříně na míru &amp; servis</span>
       </a>
 
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-        <a href="#sluzby" id="nl1" class="text-white/80 hover:text-white transition">Co opravujeme</a>
-        <a href="#zkusenosti" id="nl2" class="text-white/80 hover:text-white transition">Proč my</a>
+        <a href="#na-miru" id="nl1" class="text-white/80 hover:text-white transition">Skříně na míru</a>
+        <a href="#sluzby" id="nl2" class="text-white/80 hover:text-white transition">Servis</a>
         <a href="#galerie" id="nl3" class="text-white/80 hover:text-white transition">Ukázky</a>
-        <a href="#poptavka" id="nl4" class="text-white/80 hover:text-white transition">Rychlá oprava</a>
+        <a href="#poptavka" id="nl4" class="text-white/80 hover:text-white transition">Poptávka</a>
       </nav>
 
       <div class="flex items-center gap-3">
@@ -87,18 +87,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </header>
 
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <img src="hero.png" alt="Oprava vestavěné skříně" class="absolute inset-0 w-full h-full object-cover">
+    <img src="hero.png" alt="Vestavěné skříně na míru a servis Plzeň" class="absolute inset-0 w-full h-full object-cover">
     <div class="hero-bg absolute inset-0"></div>
     <div class="relative z-10 text-center px-6 max-w-4xl">
         <div class="inline-flex items-center gap-2 bg-amber-500 text-white text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-8">
-            <span class="w-2 h-2 rounded-full bg-white animate-ping"></span> Termíny do druhého dne
+            <span class="w-2 h-2 rounded-full bg-white animate-ping"></span> Výroba na míru · Servis do druhého dne
         </div>
-        <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">Nefunguje skříň?<br><span class="text-amber-400">Opravíme ji.</span></h1>
-        <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto">Provádíme kompletní servis a seřízení vestavěných skříní v Plzni a okolí.</p>
+        <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">Vestavěné skříně<br><span class="text-amber-400">na míru i servis.</span></h1>
+        <p class="text-xl text-white/80 mb-10 max-w-2xl mx-auto">Navrhneme, vyrobíme a namontujeme skříň přesně do vašeho prostoru. A když ta stará nefunguje, opravíme ji. Plzeň a okolí.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#poptavka" class="bg-amber-500 hover:bg-amber-400 text-white font-bold px-8 py-4 rounded-xl transition shadow-xl">Objednat servis</a>
+            <a href="#poptavka" data-lead-type="Skříň na míru" class="bg-amber-500 hover:bg-amber-400 text-white font-bold px-8 py-4 rounded-xl transition shadow-xl">Poptat skříň na míru</a>
+            <a href="#poptavka" data-lead-type="Servis / oprava" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl backdrop-blur-md border border-white/20 transition">Objednat servis</a>
             <a href="tel:+420603381044" class="bg-white hover:bg-stone-100 text-stone-900 font-bold px-8 py-4 rounded-xl transition shadow-xl">📞 Zavolat 603 381 044</a>
-            <a href="#sluzby" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl backdrop-blur-md border border-white/20 transition">Co všechno děláme?</a>
+        </div>
+    </div>
+</section>
+
+<section id="na-miru" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16 max-w-3xl">
+            <p class="text-amber-600 text-xs font-bold uppercase tracking-widest mb-4">Skříně na míru</p>
+            <h2 class="text-4xl font-black amber-line mb-6">Vestavěná skříň přesně do vašeho prostoru</h2>
+            <p class="text-stone-600 leading-relaxed">Každý prostor je jiný – šikmý strop, výklenek, chodba nebo celá stěna v ložnici. Skříň navrhneme na centimetr přesně, vyrobíme ji a namontujeme včetně ukotvení a seřízení.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mb-16">
+            <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6">
+                <span class="text-amber-600 font-black text-2xl">01</span>
+                <h3 class="text-xl font-bold mt-2 mb-2">Zaměření a návrh</h3>
+                <p class="text-stone-600">Přijedeme, změříme prostor a navrhneme rozložení polic, šuplíků i dveří podle vás.</p>
+            </div>
+            <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6">
+                <span class="text-amber-600 font-black text-2xl">02</span>
+                <h3 class="text-xl font-bold mt-2 mb-2">Výroba na míru</h3>
+                <p class="text-stone-600">Jakékoli rozměry, dispozice i stropy. Posuvné i otočné dveře, barvy a dekory dle výběru.</p>
+            </div>
+            <div class="bg-stone-50 border border-stone-200 rounded-2xl p-6">
+                <span class="text-amber-600 font-black text-2xl">03</span>
+                <h3 class="text-xl font-bold mt-2 mb-2">Montáž a seřízení</h3>
+                <p class="text-stone-600">Profesionální montáž, ukotvení a finální seřízení. O skříň se postaráme i po letech.</p>
+            </div>
+        </div>
+        <div class="gallery-grid mb-12">
+            <div class="gallery-item bg-white shadow-sm border border-stone-200 rounded-xl overflow-hidden">
+                <img src="/fotografie/svetla1.webp" alt="Béžová vestavěná skříň do ložnice">
+                <p class="p-4 text-sm italic">Béžová skříň do ložnice<br><strong>Cena s montáží: 82 000 Kč</strong></p>
+            </div>
+            <div class="gallery-item bg-white shadow-sm border border-stone-200 rounded-xl overflow-hidden">
+                <img src="/fotografie/e1.webp" alt="Skříň na míru do ložnice">
+                <p class="p-4 text-sm italic">Skříň na míru do ložnice<br><strong>Cena: 45 000 Kč</strong></p>
+            </div>
+            <div class="gallery-item bg-white shadow-sm border border-stone-200 rounded-xl overflow-hidden">
+                <img src="/fotografie/seda2.webp" alt="Tmavě šedá skříň s postelí">
+                <p class="p-4 text-sm italic">Tmavě šedá skříň s postelí<br><strong>Cena celkem: 43 000 Kč</strong></p>
+            </div>
+            <div class="gallery-item bg-white shadow-sm border border-stone-200 rounded-xl overflow-hidden">
+                <img src="/fotografie/seda1.webp" alt="Úzká skříň do pokoje">
+                <p class="p-4 text-sm italic">Úzká skříň do pokoje<br><strong>Cena komplet: 45 000 Kč</strong></p>
+            </div>
+            <div class="gallery-item bg-white shadow-sm border border-stone-200 rounded-xl overflow-hidden">
+                <img src="/fotografie/e2.webp" alt="Skříň do chodby">
+                <p class="p-4 text-sm italic">Skříň do chodby<br><strong>Cena: 40 000 Kč</strong></p>
+            </div>
+            <div class="gallery-item bg-white shadow-sm border border-stone-200 rounded-xl overflow-hidden">
+                <img src="/fotografie/e5.webp" alt="Skříň do obýváku">
+                <p class="p-4 text-sm italic">Skříň přesně do obýváku<br><strong>Cena: 40 000 Kč</strong></p>
+            </div>
+        </div>
+        <div class="text-center">
+            <p class="text-stone-600 mb-6">Hotové skříně od <strong>40 000 Kč</strong>. Individuální kalkulace podle konkrétní zakázky.</p>
+            <a href="#poptavka" data-lead-type="Skříň na míru" class="inline-block bg-amber-500 hover:bg-amber-400 text-white font-bold px-8 py-4 rounded-xl transition shadow-xl">Poptat skříň na míru</a>
         </div>
     </div>
 </section>
@@ -125,17 +182,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="zkusenosti" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div>
-            <h2 class="text-4xl font-black mb-6 amber-line">Víme, jak byly postaveny.<br>Proto je umíme opravit.</h2>
-            <p class="text-stone-600 mb-6 leading-relaxed">Dříve jsme vestavěné skříně sami vyráběli. Dnes se soustředíme na jejich profesionální servis.</p>
+            <h2 class="text-4xl font-black mb-6 amber-line">Skříně stavíme.<br>Proto je umíme i opravit.</h2>
+            <p class="text-stone-600 mb-6 leading-relaxed">Vestavěné skříně navrhujeme, vyrábíme a montujeme na míru. A protože víme, jak jsou postavené, zvládneme i jejich rychlý a spolehlivý servis.</p>
             <ul class="space-y-4">
-                <li class="flex items-center gap-3 font-bold text-stone-800">✓ Expresní termíny</li>
+                <li class="flex items-center gap-3 font-bold text-stone-800">✓ Výroba přesně na míru</li>
+                <li class="flex items-center gap-3 font-bold text-stone-800">✓ Expresní servisní termíny</li>
                 <li class="flex items-center gap-3 font-bold text-stone-800">✓ Vlastní zásoba náhradních dílů</li>
                 <li class="flex items-center gap-3 font-bold text-stone-800">✓ Férové ceny</li>
             </ul>
         </div>
         <div class="bg-stone-100 p-8 rounded-3xl border border-stone-200">
-            <h3 class="text-xl font-bold mb-4">Kolik stojí oprava?</h3>
+            <h3 class="text-xl font-bold mb-4">Kolik to stojí?</h3>
             <div class="space-y-3">
+                <div class="flex justify-between border-b border-stone-200 pb-2 italic"><span>Skříň na míru</span><span class="font-bold">od 40 000 Kč</span></div>
                 <div class="flex justify-between border-b border-stone-200 pb-2 italic"><span>Servis koleček</span><span class="font-bold">od 4 000 Kč</span></div>
                 <div class="flex justify-between border-b border-stone-200 pb-2 italic"><span>Výměna kolejnice</span><span class="font-bold">od 4 000 Kč</span></div>
                 <div class="flex justify-between border-b border-stone-200 pb-2 italic"><span>Čištění a seřízení</span><span class="font-bold">od 2 500 Kč</span></div>
@@ -147,7 +206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="galerie" class="py-24 bg-stone-50">
     <div class="max-w-7xl mx-auto px-6">
         <div class="mb-16 text-center">
-            <p class="text-amber-600 text-xs font-bold uppercase tracking-widest mb-4">Ukázky mé práce</p>
+            <p class="text-amber-600 text-xs font-bold uppercase tracking-widest mb-4">Ukázky servisu</p>
             <h2 class="text-4xl font-black text-stone-900 amber-line-center">Co všechno opravujeme</h2>
         </div>
         <div class="gallery-grid">
@@ -182,8 +241,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="poptavka" class="py-24 bg-stone-50">
     <div class="max-w-2xl mx-auto px-6">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-black mb-4">Potřebujete opravu?</h2>
-            <p class="text-stone-500">Popište nám závadu, ozveme se co nejdříve.</p>
+            <h2 class="text-4xl font-black mb-4">Nová skříň nebo oprava?</h2>
+            <p class="text-stone-500">Napište nám, co potřebujete. Nezávazná poptávka, ozveme se co nejdříve.</p>
             <p class="text-stone-500 mt-2">Nebo rovnou zavolejte: <a href="tel:+420603381044" class="font-bold text-amber-600 hover:text-amber-500">+420 603 381 044</a></p>
         </div>
         <form id="contact-form" class="space-y-5 bg-white p-8 rounded-2xl shadow-sm border border-stone-200">
@@ -196,14 +255,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="text" id="contact" name="contact" required placeholder="Kde vás zastihneme?" class="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:border-amber-500">
             </div>
             <div>
-                <label class="block text-sm font-semibold mb-2 text-stone-700">Popis závady *</label>
-                <textarea id="message" name="message" required rows="4" placeholder="Např. prasklá kolečka..." class="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:border-amber-500"></textarea>
+                <label class="block text-sm font-semibold mb-2 text-stone-700">Mám zájem o *</label>
+                <select id="lead-type" name="lead_type" required class="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:border-amber-500">
+                    <option>Skříň na míru</option>
+                    <option>Servis / oprava</option>
+                    <option>Něco jiného</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold mb-2 text-stone-700">Co potřebujete? *</label>
+                <textarea id="message" name="message" required rows="4" placeholder="Např. skříň do ložnice 250 × 260 cm, nebo prasklá kolečka u posuvných dveří..." class="w-full px-4 py-3 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:border-amber-500"></textarea>
             </div>
             <div id="form-error" class="hidden p-4 bg-red-50 text-red-600 rounded-xl text-sm"></div>
             <div id="form-success" class="hidden p-4 bg-green-50 text-green-600 rounded-xl text-sm"></div>
             
             <button type="submit" id="submit-btn" class="w-full bg-amber-500 text-white font-bold py-4 rounded-xl hover:bg-amber-400 transition shadow-lg">
-                <span id="submit-text">Odeslat žádost o servis</span>
+                <span id="submit-text">Odeslat poptávku</span>
             </button>
         </form>
     </div>
@@ -278,6 +345,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         a.addEventListener('click', () => window.dataLayer.push({ event: 'phone_click', link_url: a.href }));
     });
 
+    // Preselect inquiry type from CTA buttons
+    document.querySelectorAll('a[data-lead-type]').forEach(a => {
+        a.addEventListener('click', () => { document.getElementById('lead-type').value = a.dataset.leadType; });
+    });
+
     // Telegram Form
     const BOT_TOKEN = "5683006293:AAHIoRepm_uhfKfAYW9piJCKYAyDEM_FfAM";
     const CHAT_ID = "358369613";
@@ -293,7 +365,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         btn.disabled = true;
         btnText.textContent = 'Odesílám...';
 
-        const text = `Poptávka:\nJméno: ${document.getElementById('name').value}\nKontakt: ${document.getElementById('contact').value}\nZpráva: ${document.getElementById('message').value}`;
+        const leadType = document.getElementById('lead-type').value;
+        const text = `Poptávka (${leadType}):\nJméno: ${document.getElementById('name').value}\nKontakt: ${document.getElementById('contact').value}\nZpráva: ${document.getElementById('message').value}`;
 
         try {
             const r = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
@@ -302,7 +375,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 body: JSON.stringify({ chat_id: CHAT_ID, text })
             });
             if (!r.ok) throw new Error();
-            window.dataLayer.push({ event: 'generate_lead', form_id: 'contact-form' });
+            window.dataLayer.push({ event: 'generate_lead', form_id: 'contact-form', lead_type: leadType });
             okBox.textContent = '✓ Odesláno!';
             okBox.classList.remove('hidden');
             form.reset();
@@ -311,7 +384,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             errBox.classList.remove('hidden');
         } finally {
             btn.disabled = false;
-            btnText.textContent = 'Odeslat žádost o servis';
+            btnText.textContent = 'Odeslat poptávku';
         }
     });
 </script>
