@@ -8,6 +8,14 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PCDVZL35');</script>
     <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) – Google Ads phone call conversions -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11529391298"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-11529391298');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vestavěné skříně na míru a servis – Kutil Honza Plzeň</title>
@@ -342,7 +350,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // Tracking: phone clicks
     document.querySelectorAll('a[href^="tel:"]').forEach(a => {
-        a.addEventListener('click', () => window.dataLayer.push({ event: 'phone_click', link_url: a.href }));
+        a.addEventListener('click', () => {
+            window.dataLayer.push({ event: 'phone_click', link_url: a.href });
+            gtag('event', 'conversion', { send_to: 'AW-11529391298/9cCTCNbA264aEMKZ0vkq' });
+        });
     });
 
     // Preselect inquiry type from CTA buttons
@@ -375,9 +386,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 body: JSON.stringify({ chat_id: CHAT_ID, text })
             });
             if (!r.ok) throw new Error();
-            window.dataLayer.push({ event: 'generate_lead', form_id: 'contact-form', lead_type: leadType });
             okBox.textContent = '✓ Odesláno!';
             okBox.classList.remove('hidden');
+            window.dataLayer.push({ event: 'poptavka_submitted', form_id: 'contact-form', lead_type: leadType });
             form.reset();
         } catch (err) {
             errBox.textContent = 'Chyba odesílání.';
