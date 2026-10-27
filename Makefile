@@ -1,5 +1,7 @@
+IMAGE = ghcr.io/jandolejs/vestavne_skrine:latest
+
 build:
-	docker compose build
+	docker build --platform linux/amd64 -t $(IMAGE) .
 
 up:
 	docker compose up -d
@@ -11,4 +13,4 @@ rm:
 	docker compose rm -f
 
 push:
-	docker compose push
+	docker push $(IMAGE)
