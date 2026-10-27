@@ -8,6 +8,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PCDVZL35');</script>
     <!-- End Google Tag Manager -->
+    <script defer src="https://umami.jandolejs.cz/script.js" data-website-id="2666c3d1-482f-4a61-ad59-52b153a5bffe"></script>
     <!-- Google tag (gtag.js) – Google Ads phone call conversions -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11529391298"></script>
     <script>
@@ -389,6 +390,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             okBox.textContent = '✓ Odesláno!';
             okBox.classList.remove('hidden');
             window.dataLayer.push({ event: 'poptavka_submitted', form_id: 'contact-form', lead_type: leadType });
+            if (window.umami) umami.track('poptavka_submitted', { lead_type: leadType });
             form.reset();
         } catch (err) {
             errBox.textContent = 'Chyba odesílání.';
