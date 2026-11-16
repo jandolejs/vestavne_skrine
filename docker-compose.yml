@@ -1,10 +1,15 @@
+# Server: /var/www/vestavne_skrine (git checkout). Deploy: ssh -A root@157.90.172.155 /var/www/vestavne_skrine/deploy.sh
+# Žádný Portainer ani GHCR – image se staví přímo na serveru z checkoutu. Lokální vývoj: docker-devel.yml (make up).
+name: nabytek
+
 services:
     web:
         container_name: vestavne_skrine_frontend
-        image: ghcr.io/jandolejs/vestavne_skrine:latest
+        build: .
+        image: vestavne_skrine:server
         environment:
             APP_DEBUG: 1
             TZ: Europe/Prague
         ports:
-            - "8078:80"
+            - "8078:80"   # Cloudflare tunel (nabytek.kutilhonza.cz) míří na tenhle port
         restart: unless-stopped

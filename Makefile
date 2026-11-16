@@ -1,16 +1,6 @@
-IMAGE = ghcr.io/jandolejs/vestavne_skrine:latest
-
-build:
-	docker build --platform linux/amd64 -t $(IMAGE) .
-
+# Lokální vývoj (src/ je namapovaný do kontejneru). Produkce: ./deploy.sh na serveru.
 up:
-	docker compose up -d
+	docker compose -f docker-devel.yml up -d --build
 
 down:
-	docker compose down
-
-rm:
-	docker compose rm -f
-
-push:
-	docker push $(IMAGE)
+	docker compose -f docker-devel.yml down

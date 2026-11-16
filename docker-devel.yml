@@ -1,7 +1,7 @@
 services:
   php:
     container_name: vestavne_skrine_frontend
-    image: ghcr.io/jandolejs/vestavne_skrine:latest
+    image: vestavne_skrine:dev
     build:
       context: .
       platforms:
